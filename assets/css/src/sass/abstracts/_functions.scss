@@ -1,0 +1,22 @@
+@function is($type, $var) {
+  @return type-of($var) == $type;
+}
+
+@function reverse-cubic-bezier($arg1, $arg2, $arg3, $arg4) {
+  @return 1 - ($arg3), 1 - ($arg4), 1 - ($arg1), 1 - ($arg2);  
+}
+
+@function str-replace($string, $search, $replace: '') {
+  $index: str-index($string, $search);
+  @if $index {
+    @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+  }
+  @return $string;
+}
+
+@function strip-unit($number) {
+  @if type-of($number) == 'number' and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
+  @return $number;
+}

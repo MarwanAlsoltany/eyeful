@@ -1,0 +1,71 @@
+.dynamic {
+  @extend %container;
+  height: 0;
+  margin: 0 auto;
+  border-left: 1rem solid transparent;
+  border-right: 1rem solid transparent;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 4;
+  transition: all 500ms ease, 
+              max-width 500ms 500ms ease,
+              border 500ms 500ms ease, 
+              bottom 1500ms 500ms ease-in-out;
+  body.mam & {
+    max-width: 100%;
+    border: 0 !important;
+  }
+  @include viewport(lg, max) {
+    max-width: 100%;
+    border: 0 !important;
+  }
+  &.expanded {
+    // max-width: 100%; *** fullwidth ***
+    height: 50vh;
+    @include viewport(lg, max) {
+      height: 80vh;
+    }
+    min-height: 27rem;
+    // border-width: 0 !important; *** fullwidth ***
+    transition: all 500ms 500ms ease, 
+                max-width 500ms ease, 
+                border 500ms ease;
+    .flyout {
+      width: 100% !important; 
+      height: 100%;
+      // border-radius: 0; *** fullwidth ***
+      transition: all 500ms 500ms ease, 
+                  border-radius 500ms ease,
+                  width 500ms ease;
+      cursor: auto;
+      &::after {
+        visibility: visible;
+        opacity: 1;
+        transition: 500ms 1500ms ease; 
+      }
+      &:hover {
+        background: rgba(255,255,255,0.5);
+      }
+      > * {
+        opacity: 1;
+      }
+      h4 {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+    ~ div,
+    #modal,
+    #notifications-bar {
+      filter: blur(1rem);
+      transition: 1500ms ease;
+      pointer-events: none;
+    }
+  }
+
+  @at-root #download-link {
+    display: none;
+  }
+}

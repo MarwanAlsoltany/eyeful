@@ -1,0 +1,59 @@
+.user-info {
+  width: 100%;
+  background: rgba(0,0,0,0.25);
+  border-radius: $border-radius;
+  padding: 1rem;
+  tbody {
+    tr {
+      th, td {
+        vertical-align: top;
+        padding: 0 0 0.75rem 0;
+        @include dir-swap((
+          text-align: left
+        ));
+      }
+      th {
+        font-weight: 600;
+        text-transform: uppercase;
+        white-space: nowrap;
+        i {
+          min-width: 1rem;
+          @include dir-swap((
+            margin-right: 0.5rem
+          ));
+        }
+      }
+      td {
+        word-break: break-word;
+        word-wrap: break-word;
+        &:nth-of-type(1) {
+          padding-left: 0.5rem;
+          padding-right: 0.5rem;
+        }
+        &:nth-of-type(2) {
+          max-width: 1.5rem;
+          min-width: 1rem;
+          @include dir-swap((
+            text-align: right
+          ));
+          overflow: visible;
+          i {
+            transition: 500ms ease;
+            cursor: pointer;
+            &:hover {
+              opacity: 0.5;
+            }
+            &:active {
+              opacity: 0.25;
+            }
+          }
+        }
+      }
+      &:last-child {
+        th, td {
+          padding-bottom: 0;
+        }
+      }
+    }
+  }
+}

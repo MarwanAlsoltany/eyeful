@@ -1,0 +1,1145 @@
+{
+  "generic": {
+    "clientCheck": {
+      "user": {
+        "name": {
+          "hint": {
+            "en": "Hey there, do not forget to update your name from Control Center.",
+            "de": "Hallo, vergiss nicht, deinen Namen ins Control Center zu aktualisieren.",
+            "nl": "Hallo, vergeet niet je naam bij te werken vanuit het Control Center.",
+            "fr": "Salut, n'oubliez pas de mettre à jour votre nom dans le Centre de Contrôle.",
+            "es": "Hola, no olvide actualizar su nombre en el Centro de Control.",
+            "ar": "مرحباً ، لا تنس تحديث إسمك من مركز التحكم."
+          },
+          "default": {
+            "en": "App User",
+            "de": "App-Benutzer",
+            "nl": "App-gebruiker",
+            "fr": "Utilisateur de l'application",
+            "es": "Usuario de la aplicación",
+            "ar": "مستخدم التطبيق"
+          },
+          "update": {
+            "question": {
+              "en": "What's your name?",
+              "de": "Wie heißt du?",
+              "nl": "Wie heet jij?",
+              "fr": "Comment tu t'apelles?",
+              "es": "¿Cómo te llamas?",
+              "ar": "ما هو إسمك ؟"
+            },
+            "success": {
+              "en": "User name has been updated successfully.",
+              "de": "Benutzername wurde erfolgreich aktualisiert.",
+              "nl": "Gebruikersnaam is succesvol bijgewerkt.",
+              "fr": "Le nom d'utilisateur a été mis à jour avec succès.",
+              "es": "Nombre de usuario actualizado con éxito.",
+              "ar": "تم تحديث إسم المستخدم بنجاح ."
+            },
+            "error": {
+              "en": "{{var}} was provided. \nUser Name was not updated!",
+              "de": "{{var}} wurde bereitgestellt. Benutzername wurde nicht aktualisiert!",
+              "nl": "{{var}} is verstrekt. Gebruikersnaam is niet bijgewerkt!",
+              "fr": "{{var}} a été fourni. nom d'utilisateur n'a pas été mis à jour!",
+              "es": "{{var}} se ha implementado. ¡El nombre de usuario no se actualizó!",
+              "ar": "{{var}} قد تم تقديمها . لم يتم تحديث إسم المستخدم !"
+            }
+          }
+        },
+        "id": {
+          "save": {
+            "question": {
+              "en": "Save your User ID?",
+              "de": "Deine Benutzer-ID speichern?",
+              "nl": "Je gebruikers-ID opslaan?",
+              "fr": "Enregistrer votre ID utilisateur?",
+              "es": "¿Guardar su identificación de usuario?",
+              "ar": "حفظ معرف المستخدم ؟"
+            },
+            "description": {
+              "en": "Save your User ID somewhere safe, \nyou may need it in case of recovery.",
+              "de": "Speicher deine Benutzer-ID an einem sicheren Ort. Du benötigst diese möglichweise zur Wiederherstellung.",
+              "nl": "Bewaar je gebruikers-ID op een veilige plek, heeft u deze mogelijk nodig in geval van herstel.",
+              "fr": "Conservez votre nom d'utilisateur dans un endroit sûr. Vous en aurez peut-être besoin pour récupérer.",
+              "es": "Guarde su ID de usuario en un lugar seguro. Es posible que lo necesite para la recuperación.",
+              "ar": "إحفظ معرف المستخدم الخاص بك في مكان آمن ، قد تحتاجه في حالة الإسترجاع ."
+            }
+          }
+        },
+        "session": {
+          "hint": {
+            "en": "Session ID is generated automaticaly on every new app launch.",
+            "de": "Die Sitzungs-ID wird bei jedem neuen App-Start automatisch generiert.",
+            "nl": "Sessie-ID wordt automatisch gegenereerd bij elke nieuwe app-lancering.",
+            "fr": "L'identifiant de session est généré automatiquement à chaque lancement d'application.",
+            "es": "El ID de sesión se genera automáticamente con cada nuevo inicio de aplicación.",
+            "ar": "يتم إنشاء معرّف الجلسة تلقائيًا عند كل تشغيل جديد للتطبيق ."
+          }
+        },
+        "settings": {
+          "unsaved": {
+            "en": "Not saved (default)",
+            "de": "Nicht gespeichert (Standard)",
+            "nl": "Niet opgeslagen (standaard)",
+            "fr": "Non enregistré (par défaut)",
+            "es": "No grabado (por defecto)",
+            "ar": "لم يتم الحفظ (إفتراضي)"
+          },
+          "saved": {
+            "en": "Saved, last update on {{var}}",
+            "de": "Gespeichert, letzte Aktualisierung am {{var}}",
+            "nl": "Opgeslagen, laatste update op {{var}}",
+            "fr": "Enregistré, dernière mise à jour le {{var}}",
+            "es": "Guardado, actualizado por última vez el {{var}}.",
+            "ar": "تم الحفظ ، آخر تحديث في {{var}}"
+          },
+          "save": {
+            "question": {
+              "en": "Save current settings?",
+              "de": "Aktuelle Einstellungen speichern?",
+              "nl": "Huidige instellingen opslaan?",
+              "fr": "Enregistrer les paramètres actuels?",
+              "es": "¿Guardar configuración actual?",
+              "ar": "حفظ الإعدادات الحالية ؟"
+            },
+            "success": {
+              "en": "Current settings were saved successfully.",
+              "de": "Aktuelle Einstellungen wurden erfolgreich gespeichert.",
+              "nl": "Huidige instellingen zijn succesvol opgeslagen.",
+              "fr": "Les paramètres actuels ont été enregistrés avec succès.",
+              "es": "Los ajustes actuales se han guardado correctamente.",
+              "ar": "تم حفظ الإعدادات الحالية بنجاح ."
+            },
+            "saved": {
+              "en": "Saved",
+              "de": "Gespeichert",
+              "nl": "Opgeslagen",
+              "fr": "Enregistré",
+              "es": "Salvado",
+              "ar": "تم الحفظ"
+            }
+          },
+          "import": {
+            "success": {
+              "en": "User Configuration was imported successfully. \nChanges will take effect on the next app launch.",
+              "de": "Benutzerkonfiguration wurde erfolgreich importiert. Änderungen werden beim nächsten App-Start wirksam.",
+              "nl": "Gebruikersconfiguratie is succesvol geïmporteerd. Wijzigingen worden van kracht bij de volgende app-lancering.",
+              "fr": "La configuration utilisateur a été importée avec succès. Les modifications entreront en vigueur au prochain lancement de l'application.",
+              "es": "La configuración del usuario se ha importado correctamente. Los cambios entrarán en vigor la próxima vez que se inicie la aplicación.",
+              "ar": "تم استيراد إعدادات المستخدم بنجاح . ستدخل التغييرات حيز التنفيذ عند التشغيل القادم للتطبيق ."
+            },
+            "error": {
+              "en": "Error ... User Configuration was not imported. \nFile content is incorrect!",
+              "de": "Fehler ... Benutzerkonfiguration wurde nicht importiert. Dateiinhalt ist falsch!",
+              "nl": "Fout ... Gebruikersconfiguratie is niet geïmporteerd. Bestandsinhoud is verkeerd!",
+              "fr": "Erreur ... La configuration de l'utilisateur n'a pas été importée. Le contenu du fichier est incorrect!",
+              "es": "Error ... La configuración del usuario no se importó. ¡El contenido del archivo está mal!",
+              "ar": "خطأ ... لم يتم استيراد إعدادات المستخدم . محتوى الملف غير صحيح !"
+            }
+          },
+          "export": {
+            "question": {
+              "en": "Export your User Configuration?",
+              "de": "Deine Bnutzerkonfiguration exportieren?",
+              "nl": "Je gebruikersconfiguratie exporteren?",
+              "fr": "Exporter votre configuration utilisateur?",
+              "es": "Exportar su configuración de usuario?",
+              "ar": "تصدير إعدادات المستخدم ؟"
+            }
+          },
+          "reset": {
+            "question": {
+              "en": "Reset User Configuration?",
+              "de": "Benutzerkonfiguration zurücksetzen?",
+              "nl": "Gebruikersconfiguratie resetten?",
+              "fr": "Réinitialiser la configuration utilisateur?",
+              "es": "Restablecer configuración de usuario?",
+              "ar": "إعادة تعيين إعدادات المستخدم ؟"
+            },
+            "success": {
+              "en": "User Configuration was reset successfully. \nChanges will take effect on the next app launch.",
+              "de": "Benutzerkonfiguration wurde erfolgreich zurückgesetzt. Änderungen werden beim nächsten App-Start wirksam.",
+              "nl": "Gebruikersconfiguratie is succesvol gereset. Wijzigingen worden van kracht bij de volgende app-lancering.",
+              "fr": "La configuration de l'utilisateur a été réinitialisée avec succès. Les modifications entreront en vigueur au prochain lancement de l'application.",
+              "es": "La configuración del usuario se ha restablecido correctamente. Los cambios entrarán en vigor la próxima vez que se inicie la aplicación.",
+              "ar": "تمت إعادة ضبط إعدادات المستخدم بنجاح . ستدخل التغييرات حيز التنفيذ عند التشغيل القادم للتطبيق ."
+            }
+          },
+          "reload": {
+            "question": {
+              "en": "Are you sure?",
+              "de": "Bist du sicher?",
+              "nl": "Ben je zeker?",
+              "fr": "Êtes-vous sûr?",
+              "es": "¿Estás seguro?",
+              "ar": "هل أنت متأكد ؟"
+            },
+            "description": {
+              "en": "Caution, any unsaved work will be lost! Click OK to proceed.",
+              "de": "Achtung, nicht gespeicherte Daten werden verloren! Klicke auf OK, um fortzufahren.",
+              "nl": "Let op, niet-opgeslagen werk gaat verloren! Klik op OK om door te gaan.",
+              "fr": "Attention, tout travail non sauvegardé sera perdu! Cliquez sur D'accord continuer.",
+              "es": "¡Atención, los datos no guardados se perderán! Haga clic en Okay para continuar.",
+              "ar": "تحذير ، سيتم فقد أي عمل غير محفوظ ! إنقر فوق موافق للمتابعة ."
+            }
+          },
+          "unassigned": {
+            "button": {
+              "en": "The clicked button has no action assigned.",
+              "de": "Der angeklickte Schaltfläche ist keine Aktion zugewiesen.",
+              "nl": "Aan de geklikte knop heeft geen actie toegewezen.",
+              "fr": "Le bouton cliqué n'a aucune action assignée.",
+              "es": "Al botón pulsado no se le asigna ninguna acción.",
+              "ar": "الزر الذي تم النقر عليه لا يمتلك أي إجراء ."
+            }
+          }
+        },
+        "language": {
+          "hint": {
+            "en": "To set or unset the default language go to Advanced section.",
+            "de": "Um die Standardsprache festzulegen oder zu verwerfen, geh zum Sektion Erweitert.",
+            "nl": "Ga naar de sectie Geavanceerd om de standaardtaal ann of uit te schakelen.",
+            "fr": "Pour définir ou annuler la langue par défaut, accédez à la section Avancé.",
+            "es": "Para establecer o deshabilitar el idioma predeterminado, vaya a la sección Avanzado.",
+            "ar": "لتعيين أو إلغاء تعيين اللغة الافتراضية ، إنتقل إلى قسم الإعدادات المتقدمة ."
+          },
+          "saved": {
+            "en": "English",
+            "de": "Deutsch",
+            "nl": "Nederlands",
+            "fr": "Français",
+            "es": "Español",
+            "ar": "العربية"
+          },
+          "unsaved": {
+            "en": "Not set yet ({{var}})",
+            "de": "Noch nicht festgelegt ({{var}})",
+            "nl": "Nog niet ingesteld ({{var}})",
+            "fr": "Pas encore défini ({{var}})",
+            "es": "Aún no definido ({{var}})",
+            "ar": "لم يتم التعيين بعد ({{var}})"
+          },
+          "set": {
+            "question": {
+              "en": "Set default language?",
+              "de": "Standardsprache festlegen?",
+              "nl": "Standaardtaal instellen?",
+              "fr": "Définir la langue par défaut?",
+              "es": "Establecer idioma predeterminado?",
+              "ar": "ضبط اللغة الافتراضية ؟"
+            },
+            "description": {
+              "en": "Set the selected language as default language.",
+              "de": "Stelle die ausgewählte Sprache als Standardsprache ein.",
+              "nl": "Stel de geselecteerde taal in als standaardtaal.",
+              "fr": "Définissez la langue sélectionnée comme langue par défaut.",
+              "es": "Establecer el idioma seleccionado como idioma predeterminado.",
+              "ar": "ضبط اللغة المحددة كلغة افتراضية ."
+            },
+            "success": {
+              "en": "Default language was set successfully. \nChanges will take effect on the next app launch.",
+              "de": "Die Standardsprache wurde erfolgreich festgelegt. Änderungen werden beim nächsten App-Start wirksam.",
+              "nl": "Standaardtaal is succesvol ingesteld. Wijzigingen worden van kracht bij de volgende app-lancering.",
+              "fr": "La langue par défaut a été définie avec succès. Les modifications entreront en vigueur au prochain lancement de l'application.",
+              "es": "El idioma por defecto ha sido definido con éxito. Los cambios entrarán en vigor la próxima vez que se inicie la aplicación.",
+              "ar": "تم تعيين اللغة الافتراضية بنجاح . ستدخل التغييرات حيز التنفيذ عند التشغيل القادم للتطبيق ."
+            },
+            "error": {
+              "en": "An error occurred, No default language was set!",
+              "de": "Ein Fehler ist aufgetreten. Es wurde keine Standardsprache festgelegt!",
+              "nl": "Er is een fout opgetreden, er is geen standaardtaal ingesteld!",
+              "fr": "Une erreur est survenue, Aucune langue par défaut n'a été définie!",
+              "es": "Se ha producido un error. No se ha definido ningún idioma estándar!",
+              "ar": "حدث خطأ ، لم يتم تعيين لغة إفتراضية !"
+            }
+          },
+          "unset": {
+            "question": {
+              "en": "Unset the default language?",
+              "de": "Die Standardsprache verwerfen?",
+              "nl": "De standaardtaal afleggen?",
+              "fr": "Désactiver la langue par défaut?",
+              "es": "¿Desestablecer el idioma predeterminado?",
+              "ar": "إلغاء تعيين اللغة الافتراضية ؟"
+            },
+            "success": {
+              "en": "Default language was unset. \nChanges will take effect on the next app launch.",
+              "de": "Die Standardsprache wurde verwerft. Änderungen werden beim nächsten App-Start wirksam.",
+              "nl": "Standaardtaal was afgelegd. Wijzigingen worden van kracht bij de volgende app-lancering.",
+              "fr": "La langue par défaut n'était pas définie. Les modifications entreront en vigueur au prochain lancement de l'application.",
+              "es": "El idioma estándar fue rechazado. Los cambios se harán efectivos la próxima vez que se inicie la aplicación.",
+              "ar": "تم إلغاء تعيين اللغة الافتراضية . ستدخل التغييرات حيز التنفيذ عند التشغيل القادم للتطبيق ."
+            },
+            "error": {
+              "en": "No default language was set on the first place to be unset.",
+              "de": "Es wurde an erster Stelle keine Standardsprache festgelegt, die verwerft werden soll.",
+              "nl": "Er is op de eerste plaats geen standaardtaal ingesteld om te worden afgelegd.",
+              "fr": "Aucune langue par défaut n'a été définie à la première place pour être désactivée.",
+              "es": "No se configuró ningún idioma predeterminado en el primer lugar para ser desarmado.",
+              "ar": "لم يتم تعيين لغة افتراضية في المقام الأول لإلغاء تعيينها ."
+            }
+          }
+        }
+      }
+    },
+    "jsonParser": {
+      "placeholder": {
+        "initial": {
+          "en": "Select a JSON file from your system or paste JSON in here, then click Import.",
+          "de": "Wähle eine JSON-Datei aus deinem System aus oder füge hier eine JSON-Zeichenkette ein dann auf Importieren klicken.",
+          "nl": "Selecteer een JSON-bestand uit je systeem of plak hier een JSON-string en klik vervolgens op Importeren.",
+          "fr": "Sélectionnez un fichier JSON de votre système ou collez un JSON ici, puis cliquez sur Importer.",
+          "es": "Seleccione un archivo JSON de su sistema o inserte una cadena JSON aquí y haga clic en Importar.",
+          "ar": "إختر ملف JSON من نظامك أو الصق سلسلة JSON هنا ، ثم إنقر فوق إستيراد ."
+        },
+        "nothing": {
+          "en": "Nothing to be imported. Select a JSON file or paste a JSON string in here!",
+          "de": "Nichts zu importieren. Wähle eine JSON-Datei aus deinem System aus oder füge hier eine JSON-Zeichenkette ein!",
+          "nl": "Niets om te importeren. Selecteer een JSON-bestand of plak hier een JSON-string!",
+          "fr": "Rien à importer. Sélectionnez un fichier JSON ou collez une chaîne JSON ici!",
+          "es": "Nada que importar. ¡Seleccione un archivo JSON de su sistema o inserte una cadena JSON aquí!!",
+          "ar": "لا شيء يمكن إستيراده . حدد ملف JSON أو الصق سلسلة JSON هنا !"
+        },
+        "success": {
+          "en": "JSON was imported successfully.",
+          "de": "JSON wurde erfolgreich importiert.",
+          "nl": "JSON is succesvol geïmporteerd.",
+          "fr": "JSON a été importé avec succès.",
+          "es": "JSON fue importado con éxito.",
+          "ar": "تم إستيراد ملف JSON بنجاح ."
+        },
+        "error": {
+          "en": "Importing failed. Paste or select a valid JSON.",
+          "de": "Import fehlgeschlagen. Füge ein oder wähle aus eine gültige JSON.",
+          "nl": "Importeren mislukt. Plak of selecteer een geldige JSON.",
+          "fr": "L'importation a échoué. Collez ou sélectionnez un JSON valide.",
+          "es": "Fallo en la importación. Añada o seleccione un JSON válido.",
+          "ar": "فشل الإستيراد . الصق أو حدد ملف JSON صالح ."
+        }
+      },
+      "message": {
+        "success": {
+          "en": "JSON was imported successfully.",
+          "de": "JSON wurde erfolgreich importiert.",
+          "nl": "JSON is succesvol geïmporteerd.",
+          "fr": "JSON a été importé avec succès.",
+          "es": "JSON fue importado con éxito.",
+          "ar": "تم إستيراد ملف JSON بنجاح ."
+        },
+        "error": {
+          "en": "Importing failed, JSON is not valid.",
+          "de": "Import fehlgeschlagen, JSON ist ungültig.",
+          "nl": "Importeren mislukt, JSON is niet geldig.",
+          "fr": "L'importation a échoué, JSON n'est pas valide.",
+          "es": "Falló la importación, JSON no es válido.",
+          "ar": "فشل الإستيراد ، ملف JSON غير صالح ."
+        }
+      },
+      "fallback": {
+        "en": "Something went wrong!",
+        "de": "Etwas ist schief gelaufen!",
+        "nl": "Er is iets fout gegaan!",
+        "fr": "Quelque chose s'est mal passé!",
+        "es": "¡Algo salió mal!",
+        "ar": "حدث خطأ ما !"
+      }
+    },
+    "notify": {
+      "clear": {
+        "question": {
+          "en": "Clear all notifications?",
+          "de": "Alle Benachrichtigungen löschen?",
+          "nl": "Alle meldingen wissen?",
+          "fr": "Effacer toutes les notifications?",
+          "es": "¿Borrar todas las notificaciones?",
+          "ar": "مسح جميع الإشعارات ؟"
+        },
+        "description": {
+          "en": "Caution, you will not be able to restore deleted notifications.",
+          "de": "Achtung, gelöschte Benachrichtigungen können nicht wiederhergestellt werden.",
+          "nl": "Let op, je kan verwijderde meldingen niet herstellen.",
+          "fr": "Attention, vous ne pourrez pas restaurer les notifications supprimées.",
+          "es": "Precaución, no podrá restaurar las notificaciones eliminadas.",
+          "ar": "تحذير ، لن تتمكن من استعادة الإشعارات المحذوفة ."
+        }
+      }
+    },
+    "editable": {
+      "message": {
+        "en": "Field was updated!",
+        "de": "Feld wurde aktualisiert!",
+        "nl": "Veld is bijgewerkt!",
+        "fr": "Le champ a été mis à jour!",
+        "es": "¡El campo ha sido actualizado!",
+        "ar": "تم تحديث الحقل !"
+      },
+      "error": {
+        "en": "No value",
+        "de": "Kein Wert",
+        "nl": "Geen waarde",
+        "fr": "Aucune valeur",
+        "es": "Sin valor",
+        "ar": "لا قيمة"
+      },
+      "title": {
+        "en": "Enter a value and click OK",
+        "de": "Gebe einen Wert ein und klicke auf OK",
+        "nl": "Voer een waarde in en klik op OK",
+        "fr": "Entrez une valeur et cliquez sur OK",
+        "es": "Ingrese un valor y haga clic en Aceptar",
+        "ar": "أدخل قيمة وإنقر فوق موافق"
+      },
+      "default": {
+        "en": "default",
+        "de": "standard",
+        "nl": "standaard",
+        "fr": "défaut",
+        "es": "defecto",
+        "ar": "إفتراضي"
+      },
+      "empty": {
+        "en": "empty",
+        "de": "leer",
+        "nl": "leeg",
+        "fr": "vide",
+        "es": "vacío",
+        "ar": "فارغ"
+      }
+    },
+    "exportFile": {
+      "message": {
+        "en": "Exporting ({{var}}) has finished successfully!",
+        "de": "Der Export ({{var}}) wurde erfolgreich abgeschlossen!",
+        "nl": "Exporteren ({{var}}) is succesvol voltooid!",
+        "fr": "L'exportation ({{var}}) s'est terminée avec succès!",
+        "es": "¡La exportación ({{var}}) se ha completado con éxito.!",
+        "ar": "إنتهى تصدير ملف ({{var}}) بنجاح !"
+      }
+    },
+    "app": {
+      "launch": {
+        "time": {
+          "en": "Launch Time",
+          "de": "Startzeit",
+          "nl": "Lanceertijd",
+          "fr": "Heure de lancement",
+          "es": "Hora de lanzamiento",
+          "ar": "وقت التشغيل"
+        },
+        "notification": {
+          "en": "App launched successfully.",
+          "de": "App erfolgreich gestartet.",
+          "nl": "App is met succes gelanceerd.",
+          "fr": "App lancé avec succès.",
+          "es": "Aplicación lanzada con éxito.",
+          "ar": "تم تشغيل التطبيق بنجاح ."
+        }
+      },
+      "welcome": {
+        "friend": {
+          "en": "Hi, {{var}}!",
+          "de": "Moin, {{var}}!",
+          "nl": "Hoi {{var}}!",
+          "fr": "Salute {{var}}!",
+          "es": "¡Oye, {{var}}!",
+          "ar": "أهلاً {{var}} !"
+        },
+        "stranger": {
+          "en": "Hey there!",
+          "de": "Hallo!",
+          "nl": "Hallo!",
+          "fr": "Bonjour!",
+          "es": "¡Hola!",
+          "ar": "مرحباً !"
+        },
+        "message": {
+          "en": "Eyeful is getting stuff ready ...",
+          "de": "Eyeful Macht das Zeug bereit ...",
+          "nl": "Eyeful is zich aan het klaarmaken ...",
+          "fr": "Eyeful prépare les choses ...",
+          "es": "Eyeful está preparando cosas ...",
+          "ar": "Eyeful يقوم بالإستعداد ..."
+        }
+      }
+    }
+  },
+  "timer": {
+    "clock": {
+      "session": {
+        "am": {
+          "en": "AM",
+          "de": "AM",
+          "nl": "AM",
+          "fr": "AM",
+          "es": "AM",
+          "ar": "صباحاً"
+        },
+        "pm": {
+          "en": "PM",
+          "de": "PM",
+          "nl": "PM",
+          "fr": "PM",
+          "es": "PM",
+          "ar": "مساءً"
+        }
+      },
+      "alarm": {
+        "error": {
+          "en": "Duration is invalid or equal to zero!",
+          "de": "Dauer ist ungültig oder gleich Null!",
+          "nl": "Duur is ongeldig of gelijk aan nul!",
+          "fr": "La durée est invalide ou égale à zéro!",
+          "es": "¡La duración es inválida o igual a cero!",
+          "ar": "المدة غير صالحة أو تساوي الصفر !"
+        },
+        "on": {
+          "en": "Alarm has been turned on! \nYou will be reminded in {{var}}m.",
+          "de": "Alarm wurde angeschaltet! Du wirst in {{var}}m erinnert.",
+          "nl": "Alarm is aangeschakeld! Je zal eraan herinnerd worden in {{var}}m.",
+          "fr": "L'alarme a été activée! vous sera rappelé dans {{var}}m.",
+          "es": "¡La alarma ha sido activada! Se le recordará en {{var}}m.",
+          "ar": "تم تشغيل المنبه ! سيتم تذكيرك في {{var}} دقائق  ."
+        },
+        "off": {
+          "en": "Alarm has been turned off!",
+          "de": "Alarm wurde ausgeschaltet!",
+          "nl": "Alarm is uitgeschakeld!",
+          "fr": "L'alarme a été désactivée!",
+          "es": "¡La alarma ha sido apagada!",
+          "ar": "تم إيقاف المنبه !"
+        },
+        "done": {
+          "en": "Time is up! The alarm was set {{var}}m ago.",
+          "de": "Die Zeit ist um! Der Alarm wurde vor {{var}}m angeschaltet.",
+          "nl": "De tijd is om! Het alarm is {{var}}m geleden aangesteld.",
+          "fr": "Le temps est écoulé! L’alarme a été réglée il y a {{var}}.",
+          "es": "¡El tiempo ha terminado!  La alarma se activó hace {{var}}m",
+          "ar": "إنتهى الوقت ! تم ضبط المنبه قبل {{var}} دقيقة ."
+        },
+        "caption": {
+          "initial": {
+            "en": "Remind me in",
+            "de": "Erinnere mich an in",
+            "nl": "Herinner me in",
+            "fr": "Me rappeler dans",
+            "es": "Recuérdame de en",
+            "ar": "ذكرني في"
+          },
+          "transitional": {
+            "en": "Reminder in {{var}}m",
+            "de": "Erinnerung in {{var}}m",
+            "nl": "Herinnering in {{var}}m",
+            "fr": "Rappel dans {{var}} m",
+            "es": "Recordatorio en {{var}}m",
+            "ar": "تذكير في {{var}} دقائق"
+          },
+          "temporary": {
+            "en": "Remaining \u2248 {{var}}m",
+            "de": "Es verbleiben \u2248 {{var}}m",
+            "nl": "Resterende \u2248 {{var}}m",
+            "fr": "Restant \u2248 {{var}}m",
+            "es": "Restante \u2248 {{var}}m",
+            "ar": "المتبقي تقريباً {{var}} دقائق"
+          }
+        },
+        "button": {
+          "on": {
+            "en": "Turn on",
+            "de": "Anschalten",
+            "nl": "Aanschaklen",
+            "fr": "Allumer",
+            "es": "Encienda",
+            "ar": "تشغيل"
+          },
+          "off": {
+            "en": "Turn off",
+            "de": "Ausschalten",
+            "nl": "Uitschaklen",
+            "fr": "Éteindre",
+            "es": "Apagar",
+            "ar": "إيقاف"
+          }
+        }
+      }
+    },
+    "createEntry": {
+      "field": {
+        "update": {
+          "question": {
+            "en": "Enter a value to update the field",
+            "de": "Geben Sie einen Wert ein, um das Feld zu aktualisieren",
+            "nl": "Voer een waarde in om het veld bij te werken",
+            "fr": "Entrez une valeur pour mettre à jour le champ",
+            "es": "Ingrese un valor para actualizar el campo",
+            "ar": "أدخل قيمة لتحديث الحقل"
+          }
+        }
+      }
+    },
+    "recoverEntries": {
+      "field": {
+        "update": {
+          "question": {
+            "en": "Enter a value to update the field",
+            "de": "Geben Sie einen Wert ein, um das Feld zu aktualisieren",
+            "nl": "Voer een waarde in om het veld bij te werken",
+            "fr": "Entrez une valeur pour mettre à jour le champ",
+            "es": "Ingrese un valor para actualizar el campo",
+            "ar": "أدخل قيمة لتحديث الحقل"
+          }
+        }
+      },
+      "divider": {
+        "opening": {
+          "text": {
+            "en": "Recovery form {{var}}",
+            "de": "Wiederherstellung von {{var}}",
+            "nl": "Herstel van {{var}}",
+            "fr": "Récupération de {{var}}",
+            "es": "Recuperación de {{var}}",
+            "ar": "إسترجاع من {{var}}"
+          },
+          "title": {
+            "en": "Entries recovery from {{var}}. These entries cannot be exported as JSON again!",
+            "de": "Wiederherstellene Einträge von {{var}}. Diese Einträge können nicht wieder als JSON exportiert werden!",
+            "nl": "Invoer herstel van {{var}}. Deze invoeren kunnen niet meer als JSON worden geëxporteerd!",
+            "fr": "Récupération des entrées à partir de {{var}}. Ces entrées ne peuvent plus être exportées au format JSON!",
+            "es": "Recuperar entradas de {{var}}. Estas entradas no se pueden volver a exportar como JSON!",
+            "ar": "الإدخالات المسترجعة من {{var}} . لا يمكن تصدير هذه الإدخالات كـ JSON مرة أخرى !"
+          }
+        },
+        "closing": {
+          "text": {
+            "en": "End of the recovery",
+            "de": "Ende der Wiederherstellung",
+            "nl": "Einde van de herstel",
+            "fr": "Fin de la récupération",
+            "es": "Fin de recuperación",
+            "ar": "نهاية الإسترجاع"
+          },
+          "title": {
+            "en": "Recovered from {{var}}",
+            "de": "Wiederherstellung von {{var}}",
+            "nl": "Hersteld van {{var}}",
+            "fr": "Récupéré de {{var}}",
+            "es": "Recuperación de {{var}}",
+            "ar": "تم الإسترجاع من تاريخ {{var}}"
+          }
+        },
+        "barren": {
+          "text": {
+            "en": "Recovery from {{var}} has zero entries!",
+            "de": "Wiederherstellung von {{var}} hat Null Einträge!",
+            "nl": "Herstel van {{var}} heeft nul invoeren!",
+            "fr": "Récupération de {{var}} a zéro entrées!",
+            "es": "¡La recuperación de {{var}} tiene cero entradas!!",
+            "ar": "لا يحتوي الإسترجاع من تاريخ {{var}} على أي إدخالات ."
+          },
+          "title": {
+            "en": "This recovery has no entries, it can be that recovered data comes from a session that had no original entries (only recovered).",
+            "de": "Diese Wiederherstellung hat keine Einträge. Es kann sein, dass die wiederhergestellte Daten aus einer Sitzung stammen, in der keine ursprünglichen Einträge vorhanden waren (nur zurückerhaltene).",
+            "nl": "Dit herstel heeft geen invoer, het kan zijn dat herstelde invoeren afkomstig zijn van een sessie die geen originele invoeren had (alleen hersteld).",
+            "fr": "Cette récupération n'a pas d'entrées, il se peut que les données récupérées proviennent d'une session sans entrées d'origine (seulement récupérées).",
+            "es": "Esta recuperación no tiene entradas. Los datos recuperados pueden provenir de una sesión en la que no hubo entradas originales (sólo entradas recuperadas).",
+            "ar": "لا يحتوي هذا الإسترجاع على أي إدخالات ، هذا يحدث إذا كان الجلسة المسترجعة لا تحتوي على إدخالات أصلية (مستردة فقط) ."
+          }
+        },
+        "day": {
+          "title": {
+            "en": "Recovred entries day divider.",
+            "de": "Tagesteiler für wiederhergestellte Einträge.",
+            "nl": "Herstelde dagverdeler.",
+            "fr": "Séparateur jour diviseur entrées.",
+            "es": "Divisor diario para entradas restauradas.",
+            "ar": "حاجز يوم مسترجع ."
+          }
+        }
+      }
+    },
+    "start": {
+      "message": {
+        "en": "Timer has been started.",
+        "de": "Timer wurde gestartet.",
+        "nl": "Timer is gestart.",
+        "fr": "La minuterie a été lancée.",
+        "es": "Se ha iniciado el temporizador.",
+        "ar": "تم بدء المؤقت"
+      },
+      "hint": {
+        "en": "Timer is already started!",
+        "de": "Timer ist bereits gestartet!",
+        "nl": "Timer is al gestart!",
+        "fr": "La minuterie est déjà commencée!",
+        "es": "¡El temporizador ya ha empezado!",
+        "ar": "تم بدء المؤقت مسبقا !"
+      }
+    },
+    "stop": {
+      "message": {
+        "en": "Timer has been stopped!",
+        "de": "Timer wurde gestoppt!",
+        "nl": "Timer is gestopt!",
+        "fr": "La minuterie a été arrêtée!",
+        "es": "¡El temporizador ha sido detenido!",
+        "ar": "تم إيقاف المؤقت !"
+      },
+      "hint": {
+        "en": "Timer is not started!",
+        "de": "Timer ist nicht gestartet!",
+        "nl": "Timer is niet gestart!",
+        "fr": "Minuterie n'est pas commencé!",
+        "es": "¡El temporizador no ha comenzado!",
+        "ar": "الموقت لم يبدأ بعد !"
+      },
+      "error": {
+        "en": "Duration is is less than {{var}}s. Timer did not stop!",
+        "de": "Die Dauer beträgt weniger als {{var}}s. Der Timer hat nicht gestoppt!",
+        "nl": "Duur is korter dan {{var}}s. Timer stopte niet!",
+        "fr": "La durée est inférieure à {{var}}s. La minuterie ne s'est pas arrêtée!",
+        "es": "¡La duración es inferior a {{var}}s. El temporizador no se ha detenido!",
+        "ar": "المدة أقل من {{var}} ثوان . لم إيقاف الموقت !"
+      }
+    },
+    "add": {
+      "message": {
+        "en": "A new entry has been added.",
+        "de": "Ein neuer Eintrag wurde hinzugefügt.",
+        "nl": "Er is een nieuw invoer toegevoegd.",
+        "fr": "Une nouvelle entrée a été ajoutée.",
+        "es": "Se ha añadido una nueva entrada.",
+        "ar": "تمت إضافة إدخال جديد."
+      },
+      "hint": {
+        "en": "Timer has not been started yet!",
+        "de": "Timer ist noch nicht gestartet!",
+        "nl": "Timer is nog niet gestart!",
+        "fr": "La minuterie n'a pas encore commencé!",
+        "es": "¡El temporizador aún no se ha iniciado!",
+        "ar": "الموقت لم يبدأ بعد!"
+      },
+      "error": {
+        "en": "Timer is running, stop it then try again to add.",
+        "de": "Der Timer läuft, stoppe ihn mal und versuch es erneut.",
+        "nl": "Timer loopt, stop hem en probeer opnieuw toe te voegen.",
+        "fr": "La minuterie est en cours d'exécution, arrêtez-la, puis réessayez d'ajouter.",
+        "es": "El temporizador se está ejecutando, deténgalo e intente agregar nuevamente.",
+        "ar": "المؤقت مازال يعمل ، أوقفه ثم حاول الإضافة مرة أخرى ."
+      },
+      "text": {
+        "click": {
+          "en": "Click to edit",
+          "de": "Zum Bearbeiten anklicken",
+          "nl": "Klik om te bewerken",
+          "fr": "Cliquez pour éditer",
+          "es": "Haga clic para editar",
+          "ar": "إنقر للتعديل"
+        },
+        "none": {
+          "en": "None",
+          "de": "Keines",
+          "nl": "Niets",
+          "fr": "Aucun",
+          "es": "Ninguna",
+          "ar": "لا شيء"
+        }
+      }
+    },
+    "reset": {
+      "message": {
+        "en": "Timer has been reset!",
+        "de": "Timer wurde zurückgesetzt!",
+        "nl": "Timer is opnieuw ingesteld!",
+        "fr": "La minuterie a été réinitialisée!",
+        "es": "¡El temporizador ha sido reajustado!",
+        "ar": "تم إعادة ضبط المؤقت !"
+      },
+      "hint": {
+        "en": "Timer is reset already!",
+        "de": "Timer ist bereits zurückgesetzt!",
+        "nl": "Timer is al gereset!",
+        "fr": "La minuterie est déjà réinitialisée!",
+        "es": "¡El temporizador ya está reiniciado!",
+        "ar": "تم إعادة ضبط المؤقت مسبقا !"
+      },
+      "error": {
+        "en": "Timer is running, stop it then try to reset! \n(Flipping is possible).",
+        "de": "Der Timer läuft, stoppe ihn mal und versuch es erneut, ihn zurückzusetzen! (Flippen ist möglich).",
+        "nl": "Timer loopt, stop ermee en probeer opnieuw te resetten! (Flippen is mogelijk).",
+        "fr": "Le minuteur est en marche, arrêtez-le puis essayez de le réinitialiser! (Le retournement est possible).",
+        "es": "El temporizador se está ejecutando, deténgalo e intente reiniciarlo. (Es posible voltear).",
+        "ar": "المؤقت يعمل ، أوقفه ثم حاول إعادة الضبط ! (القَلِب ممكن)."
+      }
+    },
+    "flip": {
+      "message": {
+        "en": "Timer flipped! An entry has been added \nand another one has started.",
+        "de": "Timer hat geflipt! Ein Eintrag wurde hinzugefügt und ein anderer hat begonnen.",
+        "nl": "Timer heeft geflipt! Er is een invoer toegevoegd en een nieuwe gestart.",
+        "fr": "Retourner la minuterie! Une entrée a été ajoutée et une autre a commencé!",
+        "es": "¡Temporizador volteando! ¡Se ha agregado una entrada y otra ha comenzado!",
+        "ar": "تم قَلِب الموقت ! تمت إضافة إدخال و بدأ إدخال آخر ."
+      },
+      "hint": {
+        "en": "Flipping is possible only if the Timer is running!",
+        "de": "Das Flippen ist nur bei laufendem Timer möglich!",
+        "nl": "Flippen is alleen mogelijk als de timer loopt!",
+        "fr": "Le retournement n'est possible que si la minuterie est en marche!",
+        "es": "¡Es posible voltear solo si el temporizador está funcionando!",
+        "ar": "القَلِب ممكن فقط إذا كان الموقت قد بدأ بالعمل مسبقاً !"
+      },
+      "error": {
+        "en": "Duration is less than {{var}}s. Timer didn't flip!",
+        "de": "Die Dauer beträgt weniger als {{var}}s. Timer hat nicht geflipt!",
+        "nl": "Duur is minder dan {{var}}s. Timer heeft niet geflipt!",
+        "fr": "La durée est inférieure à {{var}}s. La minuterie n'a pas retournerdé!",
+        "es": "¡La duración es inferior a {{var}} s. ¡El temporizador no volteandó!",
+        "ar": "المدة أقل من {{var}} ثوان . لم يتم قَلِب الموقت !"
+      }
+    },
+    "remove": {
+      "message": {
+        "en": "{{var}} with ID {{var}} has been removed!",
+        "de": "{{var}} mit der ID {{var}} wurde entfernt!",
+        "nl": "{{var}} met ID {{var}} is verwijderd!",
+        "fr": "{{var}} avec l'ID {{var}} a été supprimé!",
+        "es": "{{var}} con el ID {{var}} ha sido eliminado!",
+        "ar": "تمت إزالة {{var}} رقم {{var}} !"
+      },
+      "prefix": {
+        "original": {
+          "en": "Entry",
+          "de": "Eintrag",
+          "nl": "Invoer",
+          "fr": "Entrée",
+          "es": "Entrada",
+          "ar": "إدخال"
+        },
+        "recovered": {
+          "en": "Recovered entry",
+          "de": "Zurückerhaltener Eintrag",
+          "nl": "Herstelde invoer",
+          "fr": "Entrée récupérée",
+          "es": "Entrada recuperada",
+          "ar": "الإدخال المسترجع"
+        }
+      }
+    },
+    "erase": {
+      "hint": {
+        "en": "Attention, erased entries cannot be restored. \nClick on one of the options with caution.",
+        "de": "Achtung, gelöschte Einträge können nicht zurückerhalten werden. Klicke mit Vorsicht auf eine der Optionen.",
+        "nl": "Let op, gewiste invoeren kunnen niet worden hersteld. Klik voorzichtig op een van de opties.",
+        "fr": "Attention, les entrées effacées ne peuvent pas être restaurées. Cliquez sur l'une des options avec prudence.",
+        "es": "Atención, las entradas borradas no se pueden restaurar. Haga clic en una de las opciones con precaución.",
+        "ar": "إنتبه ، الإدخالات التي تم محوها لا يمكن إستعادتها . انقر على آحد الخيارات بحذر ."
+      },
+      "all": {
+        "message": {
+          "en": "All entries have been erased.",
+          "de": "Alle Einträge wurden gelöscht.",
+          "nl": "Alle invoeren zijn gewist.",
+          "fr": "Toutes les entrées ont été effacées.",
+          "es": "Se han borrado todas las entradas.",
+          "ar": "تم محو جميع الإدخالات ."
+        },
+        "hint": {
+          "en": "There are not any entries to be erased!",
+          "de": "Es sind keine Einträge zu löschen!",
+          "nl": "Er zijn geen invoeren om te wissen!",
+          "fr": "Il n'y a aucune entrée à effacer!",
+          "es": "¡No hay entradas que borrar!!",
+          "ar": "لا توجد أي إدخالات ليتم مسحها !"
+        }
+      },
+      "imported": {
+        "message": {
+          "en": "All imported entries have been erased.",
+          "de": "Alle importierte Einträge wurden gelöscht.",
+          "nl": "Alle geïmporteerde invoeren zijn gewist.",
+          "fr": "Toutes les entrées importées ont été effacées.",
+          "es": "Se han borrado todas las entradas importadas.",
+          "ar": "تم مسح جميع الإدخالات المستوردة ."
+        },
+        "hint": {
+          "en": "There is not one imported entry. \nNothing to be erased!",
+          "de": "Es gibt keine importierter Eintrag. Nichts zu löschen!",
+          "nl": "Er is niet één geïmporteerd invoer. Niets om te wissen!",
+          "fr": "Il n'y a pas une entrée importée. Rien à effacer!",
+          "es": "No hay ninguna entrada importada. ¡No hay nada que borrar!",
+          "ar": "لا يوجد قيد واحد مستورد . لا شيء لإزالته !"
+        }
+      }
+    },
+    "restore": {
+      "hint": {
+        "en": "No one entry has been removed to be restored.",
+        "de": "Es wurde kein Eintrag entfernt, der zurückerhalten werden soll.",
+        "nl": "Geen enkele invoer is verwijderd om te worden teruggekregen.",
+        "fr": "Aucune entrée n'a été supprimée pour être restaurée.",
+        "es": "No se ha eliminado ninguna entrada para restaurarla.",
+        "ar": "لم تتم إزالة قيد واحد لإستعادته ."
+      },
+      "all": {
+        "message": {
+          "en": "All removed entries were restored successfully.",
+          "de": "Alle entfernte Einträge wurden erfolgreich zurückerhalten.",
+          "nl": "Alle verwijderde invoeren zijn succesvol teruggekregen.",
+          "fr": "Toutes les entrées supprimées ont été restaurées avec succès.",
+          "es": "Todas las entradas eliminadas se restauraron con éxito.",
+          "ar": "جميع القيود التي تمت إزالتها قد تم إستعادتها بنجاح ."
+        }
+      },
+      "last": {
+        "message": {
+          "en": "The last removed entry was restored successfully.",
+          "de": "Der zuletzt entfernte Eintrag wurde erfolgreich zurückerhalten.",
+          "nl": "De laatste verwijderde invoer is succesvol teruggekregen.",
+          "fr": "La dernière entrée supprimée a été restaurée avec succès.",
+          "es": "La última entrada eliminada se restauró con éxito.",
+          "ar": "تم إستعادة آخر إدخال تمت إزالته بنجاح ."
+        }
+      }
+    },
+    "recover": {
+      "hint": {
+        "en": "Select and import a file from Control Center first to recover it!",
+        "de": "Wählen und importieren Sie zuerst eine Datei aus dem Control Center, um sie wiederhergestellt!",
+        "nl": "Selecteer en importeer eerst een bestand uit Control Center om het te herstellen!",
+        "fr": "Sélectionnez et importez d’abord un fichier à partir du Centre de contrôle pour le récupérer!",
+        "es": "En primer lugar, seleccionar e importar un archivo desde el Centro de control para recuperarlo.",
+        "ar": "حدد و إستورد ملفًا من مركز التحكم أولاً لإستعادته !"
+      },
+      "error": {
+        "familiar": {
+          "en": "Currently imported JSON is already proccessed.",
+          "de": "Derzeitige importierte JSON ist bereits verarbeitet.",
+          "nl": "Huidige geïmporteerde JSON is al verwerkt.",
+          "fr": "JSON actuellement importé est déjà traité.",
+          "es": "Actualmente JSON importado ya está procesado.",
+          "ar": "ملف JSON المستوردة حاليًا تمت معالجتهُ مسبقاً ."
+        },
+        "format": {
+          "en": "Error ... wrong JSON file!",
+          "de": "Fehler ... falsche JSON-Datei!",
+          "nl": "Fout ... verkeerd JSON-bestand!",
+          "fr": "Erreur ... mauvais fichier JSON!",
+          "es": "Error ... ¡archivo JSON incorrecto!",
+          "ar": "خطأ ... ملف JSON خاطئ !"
+        },
+        "user": {
+          "en": "Error ... users don't match!",
+          "de": "Fehler ... Benutzer stimmen nicht überein!",
+          "nl": "Fout ... gebruikers komen niet overeen!",
+          "fr": "Erreur ... les utilisateurs ne correspondent pas!",
+          "es": "Error ... ¡los usuarios no coinciden!",
+          "ar": "خطأ ... المستخدمون لا يتطابقون !"
+        },
+        "session": {
+          "en": "Error ... importing entries from the same session is forbidden!",
+          "de": "Fehler ... das Importieren von Einträgen aus derselben Sitzung ist verboten!",
+          "nl": "Fout ... het importeren van invoeren uit dezelfde sessie is verboden!",
+          "fr": "Erreur ... l'importation d'entrées de la même session est interdite!",
+          "es": "Error ... ¡la importa de entradas de la misma sesión está prohibida!",
+          "ar": "خطأ ... إستيراد القيود من نفس الجلسة محظور !"
+        },
+        "type": {
+          "en": "Error ... JSON file must be of type JSON array!",
+          "de": "Fehler ... JSON-Datei muss vom Typ JSON-Array sein!",
+          "nl": "Fout ... JSON-bestand moet van het type JSON-array zijn!",
+          "fr": "Erreur ... Le fichier JSON doit être de type tableau JSON!",
+          "es": "Error ... ¡el archivo JSON debe ser del tipo JSON array!",
+          "ar": "خطأ ... يجب أن يكون ملف JSON من نوع JSON-Array !"
+        }
+      },
+      "success": {
+        "nothing": {
+          "en": "No one entry has been recovered!",
+          "de": "Kein Eintrag wurde wiederhergestellt!",
+          "nl": "Geen enkele invoer is hersteld!",
+          "fr": "Aucune entrée n'a été récupérée!",
+          "es": "¡No se recuperó ninguna entrada!",
+          "ar": "لم يتم إسترجاع إدخال واحد !"
+        },
+        "single": {
+          "en": "One entry from {{var}} was recovered successfully.",
+          "de": "Ein Eintrag von {{var}} wurde erfolgreich wiederhergestellt.",
+          "nl": "Eén invoer van {{var}} is succesvol hersteld.",
+          "fr": "1 entrée de {{var}} a été récupérée avec succès.",
+          "es": "Una entrada de {{var}} fue recuperada con éxito.",
+          "ar": "تم إسترجاع إدخال واحد من تاريخ {{var}} بنجاح ."
+        },
+        "multiple": {
+          "en": "{{var}} entries from {{var}} were recovered successfully.",
+          "de": "{{var}} Einträge von {{var}} wurden erfolgreich wiederhergestellt.",
+          "nl": "{{var}} invoeren van {{var}} zijn succesvol hersteld.",
+          "fr": "{{var}} entrées de {{var}} ont été récupérées avec succès.",
+          "es": "{{var}} entradas de {{var}} fueron recuperadas con éxito.",
+          "ar": "تم إسترجاع {{var}} إدخال من تاريخ {{var}} بنجاح ."
+        }
+      },
+      "saved": {
+        "hint": {
+          "en": "Recover entries of the very last session? \nClick within {{var}}s to recover.",
+          "de": "Einträge der allerletzten Sitzung wiederherstellen? Zum Wiederherstellen innerhalb von {{var}}s auf diese Benachrichtigung klicken.",
+          "nl": "Invoeren van de allerlaatste sessie herstellen? Klik binnen {{var}}s om te herstellen.",
+          "fr": "Récupérer les entrées de la toute dernière session? Cliquez dans les {{var}}s pour récupérer.",
+          "es": "¿Recuperar entradas de la última sesión? Para recuperar dentro de {{var}}s, haga clic en esta notificación.",
+          "ar": "هل تريد إسترجاع إدخالات آخر جلسة ؟ انقر خلال {{var}} ثوان ليتم إسترجاع ."
+        },
+        "success": {
+          "en": "Entries from the last session were recovered successfully.",
+          "de": "Einträge aus der letzten Sitzung wurden erfolgreich wiederhergestellt.",
+          "nl": "Invoeren van de laatste sessie zijn succesvol hersteld.",
+          "fr": "Les entrées de la dernière session ont été récupérées avec succès.",
+          "es": "Las entradas de la última sesión se recupera con éxito.",
+          "ar": "تم إسترجاع إدخالات الجلسة الأخيرة بنجاح ."
+        }
+      }
+    },
+    "export": {
+      "hint": {
+        "en": "You haven't added any entires yet. \nThere isn't anything to be exported!",
+        "de": "Du hast noch keine Einträge hinzugefügt. Es kann nichts exportiert werden!",
+        "nl": "U heeft nog geen vermeldingen toegevoegd. Er is niets om te exporteren!",
+        "fr": "Vous n'avez ajouté aucune entrée pour le moment. Il n'y a rien à exporter!",
+        "es": "Todavía no ha añadido ninguna entrada. No se puede exportar nada!",
+        "ar": "لم تقم بإضافة أي إدخالات بعد . لا يوجد أي شيء ليتم تصديره !"
+      },
+      "error": {
+        "en": "Exporting is not allowed while timer is running, \nstop it then try again.",
+        "de": "Der Export ist nicht zulässig, solange der Timer läuft. Stope mal den Timer und versuch es erneut.",
+        "nl": "Exporteren is niet toegestaan ​​terwijl de Timer loopt, stop hem en probeer het opnieuw.",
+        "fr": "L'exportation n'est pas autorisée tant que le chronomètre est en cours d'exécution, arrêtez-le, puis réessayez.",
+        "es": "La exportación no está permitida mientras el temporizador está en marcha. Detenga el temporizador y vuelva a intentarlo.",
+        "ar": "لا يُسمح بالتصدير أثناء تشغيل المؤقت ، قم بإيقافه ثم حاول مرة أخرى."
+      },
+      "prepare": {
+        "en": "Entries are being prepared for export ...",
+        "de": "Einträge werden für den Export vorbereitet ...",
+        "nl": "Invoeren worden voorbereid voor export ...",
+        "fr": "Les entrées sont en préparation pour l'exportation ...",
+        "es": "Se están preparando entradas para la exportación ...",
+        "ar": "يتم الآن إعداد الإدخالات للتصدير ..."
+      }
+    },
+    "app": {
+      "divider": {
+        "day": {
+          "text": {
+            "en": "New Day {{var}}",
+            "de": "Neuer Tag {{var}}",
+            "nl": "Nieuwe dag {{var}}",
+            "fr": "Nouveau jour {{var}}",
+            "es": "Nuevo día {{var}}",
+            "ar": "يوم جديد {{var}}"
+          },
+          "title": {
+            "en": "New session, 24 hours after Launch Time.",
+            "de": "Neue Sitzung, 24 Stunden nach der Startzeit.",
+            "nl": "Nieuwe sessie, 24 uur na de starttijd.",
+            "fr": "Nouvelle session, 24 heures après l'heure de lancement.",
+            "es": "Nueva sesión, 24 horas después del tiempo de lanzamiento.",
+            "ar": "جلسة جديدة ، بعد 24 ساعة من وقت الإطلاق ."
+          }
+        }
+      }
+    }
+  },
+  "todos": {
+    "add": {
+      "message": {
+        "en": "ToDo number {{var}} has been added.",
+        "de": "Das ToDo mit der Nummer {{var}} wurde hinzugefügt.",
+        "nl": "ToDo nummer {{var}} is toegevoegd.",
+        "fr": "La tâche portant le numéro {{var}} a été ajoutée.",
+        "es": "Tarea con número {{var}} ha sido agregado.",
+        "ar": "تمت إضافة مهمة رقم {{var}} ."
+      },
+      "hint": {
+        "en": "Write something ... Empty ToDos are not allowed!",
+        "de": "Schreibe mal etwas ... Leere ToDos sind nicht erlaubt!",
+        "nl": "Schrijf iets ... Lege ToDos zijn niet toegestaan!",
+        "fr": "Ecrire quelque chose ... Les tâches vides ne sont pas autorisés!",
+        "es": "Escribe algo ... ¡No se permiten terea vacíos!",
+        "ar": "اكتب شيئاً ما ... لا يُسمح بالمهام الفارغة !"
+      }
+    },
+    "done": {
+      "true": {
+        "en": "ToDo number {{var}} has been marked done.",
+        "de": "Das ToDo mit der Nummer {{var}} wurde als erledigt markiert.",
+        "nl": "ToDo nummer {{var}} is als gereed gemarkeerd.",
+        "fr": "La tâche portant le numéro {{var}} a été marquée comme étant terminée.",
+        "es": "Tarea con número {{var}} ha sido marcado como hecho.",
+        "ar": "تم تحديد مهمة رقم {{var}} على أنها منتهيه ."
+      },
+      "false": {
+        "en": "ToDo number {{var}} has been marked undone.",
+        "de": "Das ToDo mit der Nummer {{var}} wurde als nicht erledigt markiert.",
+        "nl": "ToDo nummer {{var}} is als niet gereed gemarkeerd.",
+        "fr": "La tâche portant le numéro {{var}} a été marquée comme étant annulée.",
+        "es": "Tarea con número {{var}} se ha marcado como deshecho.",
+        "ar": "تم تحديد مهمة رقم {{var}} على أنها غير منتهيه ."
+      }
+    },
+    "remove": {
+      "message": {
+        "en": "ToDo number {{var}} has been removed!",
+        "de": "Das ToDo mit der Nummer {{var}} wurde entfernt!",
+        "nl": "ToDo nummer {{var}} is verwijderd!",
+        "fr": "La tâche portant le numéro a été supprimée!",
+        "es": "¡Tarea con número {{var}} ha sido eliminado!",
+        "ar": "تمت إزالة مهمة رقم {{var}}!"
+      }
+    },
+    "delete": {
+      "message": {
+        "en": "All ToDos have been deleted!",
+        "de": "Alle ToDos wurden entfernt!",
+        "nl": "Alle ToDos zijn verwijderd!",
+        "fr": "Toutes les tâches ont été supprimés!",
+        "es": "¡Todas las tareas han sido eliminadas!",
+        "ar": "تم حذف جميع المهام !"
+      },
+      "hint": {
+        "en": "There isn't any ToDos to be deleted!",
+        "de": "Es sind keine ToDos zum Löschen vorhanden!",
+        "nl": "Er zijn geen ToDos om te verwijderen!",
+        "fr": "Il n'y a pas de tâches à supprimer!",
+        "es": "¡No hay tareas que eliminar!",
+        "ar": "لا توجد أي مهام ليتم حذفها !"
+      }
+    },
+    "restore": {
+      "message": {
+        "en": "All ToDos have been restored!",
+        "de": "Alle ToDos wurden zurückerhalten!",
+        "nl": "Alle ToDos zijn teruggekregen!",
+        "fr": "Toutes les tâches ont été restaurées!",
+        "es": "¡Todas las tareas han sido restauradas!",
+        "ar": "تمت إستعادة جميع المهام !"
+      },
+      "hint": {
+        "en": "Not one ToDo has been deleted to be restored!",
+        "de": "Es wurde kein ToDo entfernt, um zurückerhalten zu werden!",
+        "nl": "Geen enkele ToDo is verwijderd om te worden teruggekregen!",
+        "fr": "Aucune tâche n'a été supprimée pour être restaurée!",
+        "es": "¡Ninguna tarea ha sido eliminada para ser restaurada!",
+        "ar": "لم يتم حذف أي مهمة بعد لإستعادتها !"
+      }
+    }
+  },
+  "translations": {
+    "available": ["en", "de", "nl", "fr", "es", "ar"],
+    "convention": "class -> method -> state [-> subdivision] ...",
+    "sample": {
+      "en": "",
+      "de": "",
+      "nl": "",
+      "fr": "",
+      "es": "",
+      "ar": ""
+    }
+  }
+}
+

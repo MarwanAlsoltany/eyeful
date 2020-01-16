@@ -1,0 +1,172 @@
+@mixin viewport($breakpoint: 'md', $type: 'max', $dimension: 'width') {
+  @if ($media-queries) {
+    $property: null;
+    $value: null;
+    @if ($type != '') {
+      $property: #{$type}-#{$dimension + ': ' };
+    }
+    @else {
+      $property: #{$dimension + ': ' };
+    }
+    @if map-has-key($media-breakpoints, #{$breakpoint}) {
+      $value: map-get($media-breakpoints, #{$breakpoint});
+    } 
+    @else {
+      $value: $breakpoint;
+    }
+    
+    $query: $property + if(str-index('' + $value, 'px'), ($value - 0.02), $value);
+    @media only screen and (#{$query}) {
+      @content;
+    }
+  }
+}
+
+@mixin lang-content($map-name, $lang-list: $languages) {
+  @each $lang in $lang-list {
+    html[lang*="#{$lang}"] & {
+      content: map-get($map-name, $lang);
+    }
+  }
+}
+
+@mixin dir-swap($rules, $extra-rules: null, $overwrite-rules: true, $dir: 'rtl') {
+  $new-rules: ();
+  @each $property, $value in $rules {
+    // apply original
+    #{$property}: #{$value};
+    // modify original
+    $new-property: $property;
+    $new-value: $value;
+    @if (str-index($property, 'left') != null) {
+      $new-property: str-replace($property, 'left', 'right');
+    }
+    @else if (str-index($property, 'right') != null) {
+      $new-property: str-replace($property, 'right', 'left');
+    }
+    @if (str-index(#{$value}, 'left') != null) {
+      $new-value: str-replace(#{$value}, 'left', 'right');
+    }
+    @else if (str-index(#{$value}, 'right') != null) {
+      $new-value: str-replace(#{$value}, 'right', 'left');
+    }
+    @if ($new-property != $property or $new-value != $value) {
+      $new-rules: map-merge($new-rules, ($new-property: $new-value));
+    }
+  }
+  html[dir="#{$dir}"] & {
+    // unset original
+    @each $property, $value in $rules {
+      @if ($overwrite-rules) {
+        @if (str-index($property, 'left') != null or str-index($property, 'right') != null) {
+          #{$property}: unset;
+        }
+      }
+    }
+    // apply new
+    @each $new-property, $new-value in $new-rules {
+      #{$new-property}: $new-value;
+    }
+    // apply extra
+    @if ($extra-rules) {
+      @each $extra-property, $extra-value in $extra-rules {
+        #{$extra-property}: $extra-value;
+      }
+    }
+  }
+}
+
+@mixin pseudo-note($type: 'after', $content: '') {
+  &::#{$type} {
+    content: $content;
+    display: inline-block;
+    width: auto;
+    height: auto;
+    color: rgba(255,255,255,0.5);
+    font-family: quote(#{$typeface}), if($font-arabic == true, quote(#{$khatt}), ''), quote(#{$typeicon});
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-align: center;
+    white-space: pre-wrap;
+    padding: 1rem 2rem;
+    visibility: visible;
+    opacity: 1;
+    position: absolute;
+    right: 0;
+    bottom: 50%;
+    left: 0;
+    transform: translateY(50%);
+    transition: all 500ms cubic-bezier(reverse-cubic-bezier(0.75, -0.75, 0.55, 1.05));
+  }
+  &:not(:empty) {
+    &::#{$type} {
+      visibility: hidden;
+      opacity: 0;
+      bottom: 10%;
+      transform: translateY(0);
+      transition: all 500ms cubic-bezier(0.75, -0.75, 0.55, 1.05);
+    }
+  }
+}
+
+@mixin disabled($type: 'after', $caption: '', $body-selector: '') {
+  position: relative;
+  order: 1;
+  &::#{$type} {
+    content: '#{$caption}';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    color: rgba(255,255,255,0.75);
+    font-size: 1.125rem;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 0 0 2px rgba(0,0,0,0.35);
+    padding: 1.5rem;
+    visibility: hidden;
+    opacity: 0;
+    transition: 500ms ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  body#{$body-selector} & {
+    pointer-events: none;
+    background-image: $pattern !important;
+    * {
+      transition-duration: 250ms;
+      visibility: hidden;
+      opacity: 0;
+    }
+    &::after {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}
+
+@mixin retina {
+  @media
+    only screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (min--moz-device-pixel-ratio: 2),
+    only screen and (-o-min-device-pixel-ratio: 2/1),
+    only screen and (min-device-pixel-ratio: 2),
+    only screen and (min-resolution: 192dpi),
+    only screen and (min-resolution: 2dppx) {
+    @content;
+  }
+}
+
+@mixin prefix($property, $value, $prefixes) {
+  @each $prefix in $prefixes {
+    -#{$prefix}-#{$property}: $value;
+  }
+  #{$property}: $value;
+}
+
+@mixin vendorize($property, $value) {
+  @include prefix($property, $value, (webkit, moz, ms, o));
+}

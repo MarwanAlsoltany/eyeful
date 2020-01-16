@@ -1,0 +1,37 @@
+#json-parser {
+  textarea {
+    direction: ltr;
+    display: block;
+    width: 100%;
+    min-height: 10rem;
+    background: rgba(0,0,0,0.25);
+    color: rgba(255,255,255,0.75);
+    font-family: $mono;
+    text-align: left;
+    white-space: pre-wrap;
+    padding: 1rem;
+    border: 0;
+    outline: 0;
+    border-radius: $border-radius;
+    resize: none;
+    transition: 500ms ease;
+    @include viewport(md, max) {
+      min-height: 13.5rem;
+    }
+    &:focus {
+      box-shadow: 0 0 0 0.125rem white inset;
+    }
+    &::placeholder {
+      color: rgba(255,255,255,0.5);
+      @include dir-swap((
+        text-align: left
+      ), (
+        direction: rtl
+      ));
+    }
+    @extend %no-scrollbar;
+  }
+  input[type="file"] {
+    display: none;
+  }
+}

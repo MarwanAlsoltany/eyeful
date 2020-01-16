@@ -1,0 +1,102 @@
+#dashboard {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  background: rgba(255,255,255,0.25);
+  padding: calc(2rem - 0.5rem) calc(1.5rem - 0.25rem);
+  border-radius: $border-radius;
+  overflow: hidden;
+  user-select: none;
+  button[data-fn] {
+    display: inline-block;
+    width: 4rem;
+    height: 4rem;
+    background: rgba(255,255,255,0.25);
+    color: rgba(0,0,0,0.5);
+    font-size: 2.35rem;
+    text-align: center;
+    padding: 0;
+    margin: 0.5rem 0.25rem;
+    border-radius: $border-radius;
+    border: 0;
+    outline: 0;
+    box-shadow: 0 0 0 0.75rem rgba(0,0,0,0);
+    transition: all 500ms ease;
+    cursor: pointer;
+    &:hover {
+      background: rgba(255,255,255,0.75);
+      color: rgba(0,0,0,0.75);
+      box-shadow: 0 0 0 0.25rem rgba(0,0,0,0.25);
+    }
+    &:focus:not(:hover) {
+      box-shadow: 0 0 0 0.5rem rgba(0,0,0,0.25);
+    }
+    body.tsd & {
+      &:nth-child(2),
+      &:nth-child(3),
+      &:nth-child(4) {
+        display: none;
+      }
+    }
+    body.mdm & {
+      filter: invert(1);
+    }
+  }
+  %active {
+    background: rgba(255,255,255,0.75);
+    color: rgba(0,0,0,0.75);
+    font-size: 3rem;
+  }
+  %inactive {
+    background: rgba(255,255,255,0.15);
+    color: rgba(255,255,255,0.15);
+    pointer-events: none;
+    cursor: not-allowed;
+    i {
+      &::before {
+        content: $dashboard-placeholder;
+      }
+    }
+  }
+  %special {
+    &:focus {
+      i {
+        animation: rotate 500ms ease-in-out 1 forwards;
+      }
+    }
+  }
+  $buttons: ('start', 'stop', 'add', 'reset', 'flip');
+  // @debug nth($buttons, length($buttons));
+  @each $button in $buttons {
+    &[data-active*="#{$button}"] {
+      button[data-fn="#{$button}"] {
+        @extend %active;
+      }
+      @if ($button == 'start') {
+        button[data-fn="add"],
+        button[data-fn="reset"] {
+          @extend %inactive;
+        }
+        button[data-fn="flip"] {
+          @extend %special;
+        }
+      }
+      @if ($button == 'stop') {
+        button[data-fn="start"],
+        button[data-fn="flip"] {
+          @extend %inactive;
+        }
+      }
+      @if ($button == 'add') {
+        button[data-fn="stop"],
+        button[data-fn="flip"] {
+          @extend %inactive;
+        }
+      }
+    }
+  }
+}

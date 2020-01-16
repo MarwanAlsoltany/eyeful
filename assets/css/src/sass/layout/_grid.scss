@@ -1,0 +1,166 @@
+.pack {
+  @extend %container;
+  padding: 1rem;
+  margin: 0 auto;
+  .tier {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin: 0 -0.5rem;
+    [class*="cell"]:not([class*="inner"]) {
+      width: auto;
+      height: 100%;
+      margin: 0.5rem;
+      .cell-inner {
+        width: 100%;
+        height: auto;
+        &:not(:only-child) {
+          margin-bottom: 1rem;
+        }
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+    .cell-25 {
+      flex: 0 0 calc(25% - 1rem);
+    }
+    .cell-33 {
+      flex: 0 0 calc(33.33333333% - 1rem);
+    }
+    .cell-50 {
+      flex: 0 0 calc(50% - 1rem);
+    }
+    .cell-66 {
+      flex: 0 0 calc(66.66666666% - 1rem);
+    }
+    .cell-75 {
+      flex: 0 0 calc(75% - 1rem);
+    }
+    .cell-100 {
+      flex: 0 0 calc(100% - 1rem);
+    }
+    @include viewport(md, max) {
+      .cell-25,
+      .cell-33,
+      .cell-50,
+      .cell-66 {
+        flex: 0 0 calc(100% - 1rem);
+      }
+    }
+  }
+}
+
+label[for*="amp"] {
+  display: flex;
+  background: rgba(255,255,255,0.35);
+  padding: 0.5rem 1.5rem;
+  margin: 0.5rem 0;
+  border-radius: $border-radius;
+  cursor: pointer;
+  transition: 500ms ease;
+  &::after {
+    content: '';
+    flex: 0 1 0;
+    background: rgba(0,0,0,0.35);
+    height: 2px;
+    position: relative;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: auto;
+    margin-top: 0.875rem;
+    border-radius: 2px;
+    transition: 500ms;
+  }
+  &:hover {
+    background: rgba(255,255,255,0.75);
+    &::after {
+      flex: 1 0 auto;
+      body.mdm & {
+        background: rgba(0,0,0,0.75);
+      }
+    }
+    > span {
+      body.mdm & {
+        color: rgba(0,0,0,0.75);
+      }
+    }
+  }
+  &:active {
+    background: rgba(255,255,255,1);
+  }
+  &:nth-of-type(1):hover {
+    &::after {
+      background: $purple;
+    }
+    > span {
+      color: $purple;
+    }
+  }
+  &:nth-of-type(2):hover {
+    &::after {
+      background: $blue;
+    }
+    > span {
+      color: $blue;
+    }
+  }
+  &:nth-of-type(3):hover {
+    &::after {
+      background: rgba(0,0,0,0.65);
+    }
+    > span {
+      color: rgba(0,0,0,0.65);
+    }
+  }
+  > span {
+    display: inline-block;
+    width: auto;
+    height: auto;
+    color: rgba(0,0,0,0.35);
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    @include dir-swap((
+      padding-right: 1rem
+    ), (
+      letter-spacing: 0
+    ));
+    transition: 500ms ease;
+  }
+  & + input[id*="amp"] {
+    display: none;
+    width: 0;
+    height: 0;
+    outline: 0;
+    border: 0;
+    + div.amplifiable {
+      height: auto;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 2500ms ease;
+      > * {
+        opacity: 0;
+        transition: opacity 500ms 250ms ease,
+                    background 500ms ease;
+      }
+    }
+    &:not(:checked) {
+      + div.amplifiable {
+        transition: max-height 1000ms ease;
+      }
+    }
+    &:checked {
+      + div.amplifiable {
+        max-height: 4320px;
+        > * {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

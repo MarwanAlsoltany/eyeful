@@ -1,0 +1,127 @@
+.button {
+  display: inline-block;
+  background: rgba(0,0,0,0.65);
+  color: rgba(255,255,255,1);
+  font-weight: 400;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 0.75rem 1rem;
+  margin: 1rem 0 0 0;
+  border-radius: 0.3125rem;
+  border: none;
+  outline: none;
+  transition: 300ms ease;
+  cursor: pointer;
+  & + & {
+    margin-left: 0.75rem;
+  }
+  &:hover {
+    background: $blue;
+    &.external {
+      background: $purple;
+    }
+    body.mdm & {
+      background: rgba(0,0,0,0.35);
+    }
+  }
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+.toggle {
+  display: inline-block;
+  width: 44px;
+  height: 24px;
+  border-radius: 24px;
+  position: relative;
+  overflow: hidden;
+  transition: 500ms ease;
+  body.glt &:not(.locker) {
+    pointer-events: none;
+    opacity: 0.5;
+    filter: grayscale(100%);
+  }
+  * {
+    cursor: pointer;
+  }
+  span {
+    background: rgba(255,255,255,1);
+    border-radius: 24px;
+    box-shadow: inset 0 0 0 2px rgba(0,0,0,0.25);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: 500ms 50ms cubic-bezier(0.65, -0.45, 0.35, 1.45);
+    &::before {
+      content: "";
+      height: 20px;
+      width: 20px;
+      background: rgba(255,255,255,1);
+      border-radius: 50%;
+      box-shadow: 0 0 1px 2px rgba(0,0,0,0.25);
+      position: absolute;
+      bottom: 2px;
+      @include dir-swap((
+        left: 2px
+      ));
+      z-index: 2;
+      transition: 500ms cubic-bezier(0.65, -0.45, 0.35, 1.45);
+    }
+  }
+  input[type="checkbox"] {
+    width: 0;
+    height: 0;
+    outline: 0;
+    border: 0;
+    // opacity: 0;
+    &::before,
+    &::after {
+      content: "i";
+      display: inline-block;
+      height: 20px;
+      width: 20px;
+      color: rgba(0,0,0,0.5);
+      font: 300 12px/20px $typeface, sans-serif;
+      text-transform: uppercase;
+      text-align: center;
+      position: absolute;
+      top: 2px;
+      @include dir-swap((
+        left: 2px
+      ));
+      z-index: 1;
+      transition: 500ms cubic-bezier(0.65, -0.45, 0.35, 1.45);
+    }
+    &::after {
+      content: "o";
+      @include dir-swap((
+        left: auto,
+        right: 2px
+      ));
+    }
+    &:checked {
+      &::before,
+      &::after {
+        color: rgba(255,255,255,1);
+      }
+      + span {
+        background: $purple;
+        box-shadow: inset 0 0 0 12px rgba(0,0,0,0);
+        &::before {
+          @include dir-swap((
+            transform: translateX(20px)
+          ), (
+            transform: translateX(-20px)
+          ));
+        }
+        body.mdm & {
+          background: rgba(0,0,0,0.65);
+        }
+      }
+    }
+  }
+}

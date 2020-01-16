@@ -1,0 +1,95 @@
+.flyout {
+  direction: ltr;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  width: calc((100% * 0.333333333) - (1rem * 0.666666666));
+  height: $edges-height;
+  background: rgba(255,255,255,0.5);
+  @extend %backdrop;
+  color: rgba(255,255,255,1);
+  text-align: center;
+  padding: 1rem;
+  border-radius: $border-radius $border-radius 0 0;
+  box-shadow: 0px -3px 7px 5px rgba(0,0,0,0.075);
+  position: absolute;
+  @include dir-swap((
+    right: 0
+  ));
+  bottom: 0;
+  z-index: 2;
+  overflow: hidden;
+  transition: all 500ms ease, 
+              border-radius 500ms 500ms ease,
+              width 500ms 500ms ease;
+  cursor: pointer;
+  &:hover {
+    height: $edges-height + 0.25rem;
+    background: rgba(255,255,255,1);
+  }
+  body.mem & {
+    width: calc((100% * 0.5) - (1rem / 2));
+  }
+  body.mam & {
+    width: 100% !important;
+    border-radius: 0 !important;
+  }
+  @include viewport(lg, max) {
+    width: 100% !important;
+    border-radius: 0 !important;
+  }
+  @include viewport(xs, max) {
+    &:hover {
+      height: $edges-height + 0.25rem;
+      background: rgba(255,255,255,1);
+      h4 {
+        color: rgba(0,0,0,0.5);
+      }
+    }
+  }
+  &::after {
+    @include lang-content($flyout-placeholder);
+    display: inline-block;
+    width: 100%;
+    height: auto;
+    color: rgba(0,0,0,0.35);
+    font-size: 0.625rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 0 1rem 1rem 1rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    visibility: hidden;
+    opacity: 0;
+    cursor: pointer;
+  }
+  > * {
+    opacity: 0;
+  }
+  .lift {
+    opacity: 1;
+    user-select: none;
+    transition: 500ms ease-in-out;
+    i {
+      font-style: normal;
+      body.mdm & {
+        filter: grayscale(100%);
+        text-shadow: none;
+      }
+    }
+  }
+  .copyright {
+    color: rgba(0,0,0,0.35);
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-top: 3rem;
+    &::before {
+      content: '#{$copyright-placeholder}';
+      font: $font-awesome;
+      margin-right: 0.5rem;
+    }
+  }
+}

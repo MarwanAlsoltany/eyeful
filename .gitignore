@@ -1,0 +1,13 @@
+### VisualStudioCode ###
+.vscode/*
+
+### VisualStudioCode Patch ###
+# Ignore all local history of files
+.history
+
+### Node ###
+logs
+node_modules/
+*.env
+*.zip
+*.log

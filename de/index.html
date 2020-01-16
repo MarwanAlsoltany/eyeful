@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="de" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <base href="../" target="_blank">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0">
+    <title>Eyeful (DE) | Deutsch</title>
+    <meta name="description" content="Eyeful — Eine Zeiterfassung-App mit einigen netten Funktionen.">
+    <meta name="keywords" content="HTML, CSS, JS, JavaScript, SWA, PWA, App, Application, Timer, Time-Tracker, Todos, Todo-List">
+    <meta name="author" content="Marwan Al-Soltany">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Eyeful">
+    <meta name="twitter:title" content="Eyeful">
+    <meta property="og:description" content="Eyeful — A universal time tracking application with some neat features.">
+    <meta name="twitter:description" content="Eyeful — A universal time tracking application with some neat features.">
+    <meta property="og:image" content="assets/images/logo.svg">
+    <meta name="twitter:image" content="assets/images/logo.svg">
+    <meta name="og:site_name" content="Eyeful">
+    <meta name="twitter:site" content="Eyeful">
+    <meta name="twitter:card" content="summary">
+    <link rel="canonical" href="/">
+    <link rel="prefetch" href="index.html" as="document" />
+    <link rel="prefetch" href="nl/index.html" as="document" />
+    <link rel="prefetch" href="fr/index.html" as="document" />
+    <link rel="prefetch" href="es/index.html" as="document" />
+    <link rel="prefetch" href="ar/index.html" as="document" />
+    <link rel="prerender" href="en/index.html" />
+    <meta name="application-name" content="Eyeful">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="msapplication-TileColor" content="#2a2a2a">
+    <meta name="msapplication-config" content="assets/images/favicon/browserconfig.xml">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Eyeful">
+    <link href="assets/images/favicon/site.webmanifest" rel="manifest" >
+    <link href="assets/images/favicon/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <link href="assets/images/favicon/favicon-16x16.png" rel="icon" type="image/png" sizes="16x16">
+    <link href="assets/images/favicon/favicon-32x32.png" rel="icon" type="image/png" sizes="32x32">
+    <link href="assets/images/favicon/favicon-194x194.png" rel="icon" type="image/png" sizes="194x194">
+    <link href="assets/images/favicon/android-chrome-192x192.png" rel="icon" type="image/png" sizes="192x192">
+    <link href="assets/images/favicon/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+    <link href="assets/images/splashscreen/iphone-5.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+    <link href="assets/images/splashscreen/iphone-6.png" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+    <link href="assets/images/splashscreen/iphone-plus.png" media="(device-width: 621px) and (device-height: 1104px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image" />
+    <link href="assets/images/splashscreen/iphone-x.png" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image" />
+    <link href="assets/images/splashscreen/iphone-xr.png" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+    <link href="assets/images/splashscreen/iphone-xs-max.png" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image" />
+    <link href="assets/images/splashscreen/ipad.png" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+    <link href="assets/images/splashscreen/ipad-pro-1.png" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+    <link href="assets/images/splashscreen/ipad-pro-3.png" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+    <link href="assets/images/splashscreen/ipad-pro-2.png" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+    <link rel="apple-touch-startup-image" href="assets/images/splashscreen/ipadpro2_splash.png" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2)" />
+    <link href="assets/images/favicon/safari-pinned-tab.svg" rel="mask-icon"  color="#2a2a2a">
+    <link rel="stylesheet" type="text/css" href="assets/css/dist/app.bundle.css">
+</head>
+<body>
+    <div id="app">
+        <div id="intro" class="employed">
+            <img src="assets/images/logo.svg" alt="Logo" />
+        </div>
+        <div class="dynamic">
+            <div id="modal">
+                <form data-fn="form">
+                    <h3 data-fn="heading">Gebe einen Wert ein und klicke auf OK</h3>
+                    <p data-fn="message"></p>
+                    <label data-fn="current" for="modal-input" title="Aktueller Wert"></label>
+                    <input data-fn="text" type="text" tabindex="-1" id="modal-input" placeholder="Schreibe etwas ..." />
+                    <input data-fn="cancel" type="reset" tabindex="-1" value="Abbrechen" />
+                    <input data-fn="submit" type="button" tabindex="-1" value="OK" />
+                </form>
+            </div>
+            <div id="notifications-bar"></div>
+            <div class="flyout">
+                <h4 class="lift" title="Click for more info.">Made with <i>❤️</i> by MAKS.</h4>
+                <div class="body-text">
+                    <h1>Eyeful</h1>
+                    <p>
+                        This application was developed for personal use. <br/>
+                        However it has come so far that it deserved to be published. <br/>
+                        Feel free to use and/or fork it.
+                    </p>
+                    <p>
+                        Email me directly at
+                        <a href="mailto:&#77;&#x61;r&#119;&#97;n&#x41;&#x6c;&#115;olta&#110;&#x79;&#64;&#103;ma&#x69;&#x6c;&#x2e;&#99;&#111;m" tabindex="-1">MarwanAlsoltany(at)gmail.com</a>
+                        about bugs or suggestions.
+                    </p>
+                    <p>Licensed under <a href="https://github.com/MarwanAlsoltany/eyeful/blob/master/LICENSE" target="_blank" tabindex="-1">MIT License.</a></p>
+                    <p><a class="button external" href="https://github.com/MarwanAlsoltany/eyeful" target="_blank" tabindex="-1">Github <i class="icon-github"></i></a></p>
+                </div>
+            </div>
+        </div>
+        <div class="control-center">
+            <div class="bar">
+                <div id="indicator">
+                    <span title="Ein Prozess ist im Gange."></span>
+                    <span title="Auf Aktion warten."></span>
+                    <span title="Bereit für weitere Aktionen."></span>
+                </div>
+                <div id="launch-time"></div>
+                <div id="hamburger" title="Control Center.">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <div class="settings">
+                <div class="pack">
+                    <label for="amplifier"><span>App Einstellungen</span></label>
+                    <input id="amplifier" type="checkbox" checked tabindex="-1"/>
+                    <div class="tier amplifiable">
+                        <div class="cell-33">
+                            <div class="cell-inner">
+                                <h3>Allgemein</h3>
+                                <div class="option">
+                                    <span class="caption">Toggles Sperren</span>
+                                    <label class="toggle locker">
+                                        <input type="checkbox" data-fn="glt" tabindex="-1"/> 
+                                        <span></span>
+                                    </label>
+                                </div>
+                                <div class="option">
+                                    <span class="caption pc-only">Geräumig UI</span>
+                                    <label class="toggle">
+                                        <input type="checkbox" data-fn="gcu" tabindex="-1"/>
+                                        <span></span>
+                                    </label>
+                                </div>
+                                <div class="option">
+                                    <span class="caption">Benachrichtig&shy;ungs&shy;protokoll</span>
+                                    <label class="toggle">
+                                        <input type="checkbox" data-fn="gnl" tabindex="-1"/>
+                                        <span></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cell-33">
+                            <div class="cell-inner">
+                                <h3>Timer</h3>
+                                <div class="option">
+                                    <span class="caption pc-only">Vereinfachtes Dashboard</span>
+                                    <label class="toggle">
+                                        <input type="checkbox" data-fn="tsd" tabindex="-1"/>
+                                        <span></span>
+                                    </label>
+                                </div>
+                                <div class="option">
+                                    <span class="caption pc-only">Vereinfachte Tabelle</span>
+                                    <label class="toggle">
+                                        <input type="checkbox" data-fn="tst" tabindex="-1"/>
+                                        <span></span>
+                                    </label>
+                                </div>
+                                <div class="option">
+                                    <span class="caption">Erweiterte Optionen</span>
+                                    <label class="toggle">
+                                        <input type="checkbox" data-fn="tao" tabindex="-1"/>
+                                        <span></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cell-33">
+                            <div class="cell-inner">
+                                <h3>Modi</h3>
+                                <div class="option">
+                                    <span class="caption">Dunkel</span>
+                                    <label class="toggle">
+                                        <input type="checkbox" data-fn="mdm" tabindex="-1"/>
+                                        <span></span>
+                                    </label>
+                                </div>
+                                <div class="option">
+                                    <span class="caption">Wesentliches</span>
+                                    <label class="toggle">
+                                        <input type="checkbox" data-fn="mem" tabindex="-1"/>
+                                        <span></span>
+                                    </label>
+                                </div>
+                                <div class="option">
+                                    <span class="caption">Altra-Simpel</span>
+                                    <label class="toggle">
+                                        <input type="checkbox" data-fn="mam" tabindex="-1"/>
+                                        <span></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <label for="amplifier"><span>Benutzer</span></label>
+                    <input id="amplifier" type="checkbox" checked tabindex="-1"/>
+                    <div class="tier amplifiable">
+                        <div class="cell-50">
+                            <div class="cell-inner" id="user-info">
+                                <h3 class="flexed">Benutzer&shy;info
+                                    <div data-fn="controls" class="controls">
+                                        <b class="action" data-fn="import" title="Benutzerkonfiguration importieren." role="button">Importieren</b>
+                                        <b class="action" data-fn="export" title="Benutzerkonfiguration exportieren." role="button">Exportieren</b>
+                                        <b class="action" data-fn="reset" title="Benutzerkonfiguration zurücksetzen." role="button">Zurücksetzen</b>
+                                    </div>
+                                </h3>
+                                <table data-fn="table" class="user-info">
+                                    <tbody>
+                                        <tr data-id="userName"><th><i class="icon-user-o"></i>Benutzername</th><td></td><td title="Klicke für weitere Informationen."><i class="icon-question-circle"></i></td></tr>
+                                        <tr data-id="userSettings"><th><i class="icon-cog"></i>Einstellungen</th><td></td><td title="Klicke für weitere Informationen."><i class="icon-check-circle"></i></td></tr>
+                                        <tr data-id="userLanguage"><th><i class="icon-flag"></i>Sprache</th><td></td><td title="Klicke für weitere Informationen."><i class="icon-info-circle"></i></td></tr>
+                                        <tr data-id="userId"><th><i class="icon-tag"></i>Benutzer-ID</th><td class="mono"></td><td title="Klicke für weitere Informationen."><i class="icon-info-circle"></i></td></tr>
+                                        <tr data-id="sessionId"><th><i class="icon-hourglass-half"></i>Sitzung-ID</th><td class="mono"></td><td title="Klicke für weitere Informationen."><i class="icon-info-circle"></i></td></tr>
+                                    </tbody>
+                                </table>
+                                <button data-fn="reload" tabindex="-1" class="button" title="App neu laden, um die Einstellungsänderungen zu übernehmen.">App neu laden</button>
+                            </div>
+                        </div>
+                        <div class="cell-50">
+                            <div class="cell-inner" id="notifications-log">
+                                <h3 class="flexed">Benachrichtig&shy;ungs&shy;protokoll
+                                    <div data-fn="controls" class="controls">
+                                        <b class="action" data-fn="clear" title="Alle protokollierte Benachrichtigungen löschen" role="button">Löschen</b>
+                                        <b class="action" data-fn="counter" title="Protokollierte Benachrichtigungen Anzahl.">0</b>
+                                    </div>
+                                </h3>
+                                <ol data-fn="log" class="notifications-log"></ol>
+                            </div>
+                        </div>
+                    </div>
+                    <label for="amplifier"><span>Erweitert</span></label>
+                    <input id="amplifier" type="checkbox" checked tabindex="-1"/>
+                    <div class="tier amplifiable">
+                        <div class="cell-33">
+                            <div class="cell-inner shortcuts">
+                                <h3>Tastaturkürzel</h3>
+                                <ul>
+                                    <li><span><i class="icon-play-circle"></i>Starten</span><span><i>Alt</i>+<i>Shift</i>+<i>1</i></span></li>
+                                    <li><span><i class="icon-stop-circle"></i>Stoppen</span><span><i>Alt</i>+<i>Shift</i>+<i>2</i></span></li>
+                                    <li><span><i class="icon-plus-circle"></i>Hinzufügen</span><span><i>Alt</i>+<i>Shift</i>+<i>3</i></span></li>
+                                    <li><span><i class="icon-minus-circle"></i>Zurücksetzen</span><span><i>Alt</i>+<i>Shift</i>+<i>4</i></span></li>
+                                    <li><span><i class="icon-refresh"></i>Flippen</span><span><i>Alt</i>+<i>Shift</i>+<i>5</i></span></li>
+                                    <li><span></span> <span><i>Alt</i>+<i>Shift</i>+<i>F</i></span></li>
+                                    <li><span><i class="icon-undo"></i>Zurückerhalten</span><span><i>Alt</i>+<i>Shift</i>+<i>Z</i></span></li>
+                                    <li><span><i class="icon-file-excel-o"></i>Excel exportieren</span><span><i>Alt</i>+<i>Shift</i>+<i>E</i></span></li>
+                                    <li><span><i class="icon-file-text-o"></i>JSON exportieren</span><span><i>Alt</i>+<i>Shift</i>+<i>J</i></span></li>
+                                    <li><span><i class="icon-upload"></i>Datei öffnen</span><span><i>Alt</i>+<i>Shift</i>+<i>O</i></span></li>
+                                    <li><span><i class="icon-repeat"></i>Wiederherstellen</span><span><i>Alt</i>+<i>Shift</i>+<i>R</i></span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="cell-66">
+                            <div class="cell-inner" id="language-pick">
+                                <h3 class="flexed">Sprache
+                                    <div data-fn="controls" class="controls">
+                                        <b class="action" data-fn="set" title="Ausgewählte Sprache als Standardsprache einstellen" role="button">Einstellen</b>
+                                        <b class="action" data-fn="unset" title="Standardsprache verwerfen" role="button">Verwerfen</b>
+                                    </div>
+                                </h3>
+                                <form class="language-pick">
+                                    <input data-fn="language" type="radio" name="lang" tabindex="-1" id="de">
+                                    <label class="language" for="de">
+                                        <span>Deutsch</span>
+                                    </label>
+                                    <input data-fn="language" type="radio" name="lang" tabindex="-1" id="en">
+                                    <label class="language" for="en">
+                                        <span>English</span>
+                                    </label>
+                                    <input data-fn="language" type="radio" name="lang" tabindex="-1" id="nl">
+                                    <label class="language" for="nl">
+                                        <span>Nederlands</span>
+                                    </label>
+                                    <input data-fn="language" type="radio" name="lang" tabindex="-1" id="fr">
+                                    <label class="language" for="fr">
+                                        <span>Français</span>
+                                    </label>
+                                    <input data-fn="language" type="radio" name="lang" tabindex="-1" id="es">
+                                    <label class="language" for="es">
+                                        <span>Español</span>
+                                    </label>
+                                    <input data-fn="language" type="radio" name="lang" tabindex="-1" id="ar">
+                                    <label class="language" for="ar">
+                                        <span>العربية</span>
+                                    </label>
+                                </form>
+                            </div>
+                            <div class="cell-inner" id="json-parser">
+                                <h3>JSON-Parser</h3>
+                                <input data-fn="file" type="file" accept="application/json" tabindex="-1"/>
+                                <textarea data-fn="textarea" tabindex="-1" placeholder=""></textarea>
+                                <button data-fn="select" tabindex="-1" class="button" title="Eine Datei aus deinem System auswählen.">Auswählen</button>
+                                <button data-fn="import" tabindex="-1" class="button" title="Das ausgewählte oder eingefügte JOSN für weitere Aktionen importieren.">Importieren</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="static">
+            <div id="dashboard">
+                <button data-fn="start" tabindex="1" title="Diese Schaltfläche startet den Timer.">
+                    <i class="icon-play-circle"></i>
+                </button>
+                <button data-fn="stop" tabindex="-1" title="Diese Schaltfläche stoppt den Timer.">
+                    <i class="icon-stop-circle"></i>
+                </button>
+                <button data-fn="add" tabindex="-1" title="Diese Schaltfläche fügt einen Eintrag hinzu.">
+                    <i class="icon-plus-circle"></i>
+                </button>
+                <button data-fn="reset" tabindex="-1" title="Diese Taste setzt den Timer zurück.">
+                    <i class="icon-minus-circle"></i>
+                </button>
+                <button data-fn="flip" tabindex="2" title="Wenn der Timer bereits gestartet ist, stoppt diese Schaltfläche, fügt einen Eintrag hinzu, setzt den Timer zurück und startet ihn gleichzeitig.">
+                    <i class="icon-refresh"></i>
+                </button>
+            </div>
+            <div id="clock"></div>
+            <div class="table-container">
+                <table class="times-table">
+                    <thead>
+                        <tr>
+                            <th title="Eintragskennung.">ID</th>
+                            <th title="Startzeit-Zeitstempel.">Startzeit</th>
+                            <th title="Stoppzeit-Zeitstempel.">Endzeit</th>
+                            <th title="Verbrauchte Zeit von Start bis Ende.">Verbrauch</th>
+                            <th title="Optional Bezeichnung.">Bezeichnung</th>
+                            <th title="Ein Hinweis zusätzlich zum Bezeichnung.">Hinweis</th>
+                        </tr>
+                    </thead>
+                    <tbody id="entries-container"></tbody>
+                </table>
+                <div class="placeholder"></div>
+                <div id="entries-options" class="app-options" data-options="false">
+                    <span data-fn="erase" title="Klicke für weitere Informationen.">
+                        <i class="icon-trash"></i>Löschen
+                        <div class="context">
+                            <span data-fn="imported" title="Importierte Einträge löschen."><i class="icon-minus-square-o"></i>Importiert löschen</span>
+                            <span data-fn="all" title="Alle Einträge löschen (schädlich!)."><i class="icon-trash"></i>Alle löschen</span>
+                        </div>
+                    </span>
+                    <span data-fn="restore" title="Der zuletzte gelöschte Eintrag zurückerhalten.">
+                        <i class="icon-undo"></i>Zurückerhalten
+                        <div class="context">
+                            <span data-fn="all" title="Alle gelöschte Einträge zurückerhalten."><i class="icon-undo"></i>Alle zurückerhalten</span>
+                            <span data-fn="two" title="Der letzte gelöschte Einträge zurückerhalten."><i class="icon-undo"></i>Letzte zwei zurückerhalten</span>
+                            <span data-fn="one" title="Der letzte gelöschte Einträge zurückerhalten."><i class="icon-undo"></i>Letzte zurückerhalten</span>
+                        </div>
+                    </span>
+                    <span data-fn="recover" title="Einträge wiederherstellen, wenn eine JSON importiert ist.">
+                        <i class="icon-repeat"></i>Wiederherstellen
+                        <div class="context">
+                            <span data-fn="open" title="JSON-Datei aus deinem System auswählenund importieren."><i class="icon-upload"></i>Datei öffnen</span>
+                            <span data-fn="recover" title="Einträge aus der zuletzt importierten JSON-Datei wiederherstellen."><i class="icon-repeat"></i>Wiederherstellen</span>
+                        </div>
+                    </span>
+                    <span data-fn="export" title="Einträge als eines der verfügbaren Dateiformate exportieren (Standard-XLS).">
+                        <i class="icon-download"></i>Exportieren
+                        <div class="context">
+                            <span data-fn="json" title="Einträge als JSON-Datei exportieren. Bei diesem Dateiformat sind keine ursprünglichen (importierte) Einträge ausgeschlossen!"><i class="icon-file-text-o"></i>JSON (wiederherstellbar)</span>
+                            <span data-fn="html" title="Einträge als HTML-Datei exportieren."><i class="icon-file-code-o"></i>HTML (Dokument)</span>
+                            <span data-fn="txt" title="Einträge als TXT-Datei exportieren."><i class="icon-file-o"></i>TXT (Reines Text)</span>
+                            <span data-fn="csv" title="Einträge als CSV-Datei exportieren."><i class="icon-file"></i>CSV (Excel)</span>
+                            <span data-fn="xls" title="Einträge als XLS-Datei exportieren."><i class="icon-file-excel-o"></i>XLS (Excel)</span>
+                        </div>
+                    </span>
+                </div>
+            </div>
+            <div class="todos-container">
+                <div id="todos-header">
+                    <h2>ToDos</h2>
+                    <p>Du hast <b data-fn="counter">0</b> ToDos hinzugefügt</p>
+                    <form>
+                        <input data-fn="input" type="search" tabindex="3" placeholder="Was hast du vor?" />
+                        <input data-fn="button" type="button" tabindex="-1" value="Hinzufügen" />
+                    </form>
+                </div>
+                <ul id="todos-container"></ul>
+                <div id="todos-options" class="app-options" data-options="false">
+                    <span data-fn="delete" title="Alle ToDos löschen."><i class="icon-trash"></i>Alle löschen</span>
+                    <span data-fn="restore" title="Eine oder mehrere ToDos zurückerhalten, falls eine gelöscht ist."><i class="icon-undo"></i>Alle zurückerhalten</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/dist/app.bundle.js"></script>
+</body>
+</html>

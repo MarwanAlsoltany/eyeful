@@ -1,0 +1,122 @@
+.static {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: 
+    'top-left top-right side'
+    'bottom bottom side';
+  grid-column-gap: 1rem;
+  grid-row-gap: 1rem;
+  @extend %container;
+  @extend %vertically-centered;
+  margin: 0 auto;
+  transition: 500ms ease;
+  animation: scale-up 2000ms ease 6250ms 1;
+  > * {
+    box-shadow: 0 0 10px 5px $outer-shadow;
+    transition: 500ms ease;
+  }
+  body.mem & {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+      'top-left top-right'
+      'bottom bottom';
+  }
+  body.mam & {
+    min-height: 100vh;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+      'bottom';
+  }
+  @at-root #dashboard {
+    grid-area: top-left;
+  }
+  @at-root #clock {
+    grid-area: top-right;
+  }
+  @at-root .table-container {
+    grid-area: bottom;
+  }
+  @at-root .todos-container {
+    grid-area: side;
+    body.mem & {
+      display: none;
+    }
+  }
+  body.mam & {
+    > #dashboard,
+    > #clock,
+    > .todos-container {
+      display: none;
+    }
+  }
+}
+@include viewport(lg, max) {
+  .static {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+      'was-top-right was-side'
+      'was-top-left was-side'
+      'bottom bottom';
+    body.mem & {
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: 
+        'was-top-left was-top-right'
+        'bottom bottom';
+    }
+    // @at-root (with: media) 
+    #dashboard {
+      grid-area: was-top-left;
+    }
+    // @at-root (with: media) 
+    #clock {
+      grid-area: was-top-right;
+    }
+    // @at-root (with: media) 
+    .table-container {
+      grid-area: bottom;
+    }
+    // @at-root (with: media) 
+    .todos-container {
+      grid-area: was-side;
+    }
+  }
+}
+@include viewport(md, max) {
+  .static {
+    padding-top: if($titlebar-height != 0, $titlebar-height + $edges-padding, $edges-padding);
+    padding-bottom: $edges-padding;
+    grid-template-areas: 
+      'was-side was-side'
+      'was-top-right was-top-right'
+      'was-top-left was-top-left'
+      'bottom bottom';
+    body.mem & {
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: 
+        'was-top-right was-top-right'
+        'was-top-left was-top-left'
+        'bottom bottom';
+    }
+    body.mam & {
+      grid-template-columns: 1fr;
+      grid-template-areas: 'bottom';
+    }
+    // @at-root (with: media) 
+    #dashboard {
+      grid-area: was-top-left;
+    }
+    // @at-root (with: media) 
+    #clock {
+      grid-area: was-top-right;
+    }
+    // @at-root (with: media) 
+    .table-container {
+      grid-area: bottom;
+    }
+    // @at-root (with: media) 
+    .todos-container {
+      grid-area: was-side;
+    }
+  }
+}

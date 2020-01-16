@@ -1,0 +1,59 @@
+.shortcuts {
+  @include viewport(xs, max) {
+    @include disabled('after', '', '');
+    &::after {
+      @include lang-content($shortcuts-placeholder);
+    }
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    li {
+      display: flex;
+      flex-flow: row wrap;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 0.5rem;
+      span {
+        overflow: hidden;
+        &:nth-child(1) {
+          flex: 1 1 auto;
+          font-weight: 600;
+          text-transform: uppercase;
+          overflow: visible;
+          i {
+            min-width: 1rem;
+            @include dir-swap((
+              margin-right: 0.5rem
+            ));
+          }
+        }
+        &:nth-child(2) {
+          direction: ltr;
+          flex: 0 1 auto;
+          font-weight: 700;
+          white-space: nowrap;
+          i {
+            display: inline-block;
+            min-width: 2rem;
+            background: rgba(0,0,0,0.65);
+            font-weight: 400;
+            text-align: center;
+            padding: 0.25rem 0.5rem;
+            margin: 0 0.25rem;
+            border-radius: 0.625rem * 0.5;
+            &:last-of-type {
+              margin-right: 0;
+            }
+            &:first-of-type {
+              @include dir-swap((), (
+                margin-left: 0
+              ), false);
+            }
+          }
+        }
+      }
+    }
+  }
+}

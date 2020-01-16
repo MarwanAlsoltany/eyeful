@@ -1,0 +1,117 @@
+.language-pick {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 -0.5rem;
+  @at-root label.language {
+    flex: 0 0 2.5rem;
+    direction: ltr;
+    display: inline-block;
+    width: 2.5rem;
+    height: 2.5rem;
+    background: rgba(0,0,0,0.35);
+    color: rgba(255,255,255,1);
+    font-weight: 600;
+    line-height: 2.5rem;
+    text-transform: uppercase;
+    margin: 0 0.5rem;
+    border-radius: 2.5rem;
+    position: relative;
+    cursor: pointer;
+    transition: all 500ms ease,
+                flex 1000ms ease;
+    &::before,
+    &::after {
+      display: inherit;
+      width: inherit;
+      text-align: center;
+      transition: 500ms ease;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    &::before {
+      content: attr(for);
+      transition-delay: 500ms;
+    }
+    &[for="ar"]::before {
+      content: '\0636';
+    }
+    &::after {
+      content: $language-placeholder;
+      font: $font-awesome;
+      color: rgba(255,255,255,0);
+      line-height: inherit;
+      border-radius: 50%;
+      right: 0;
+      left: auto;
+    }
+    &:hover {
+      flex: 1 1 100%;
+      &::before {
+        opacity: 0;
+        transition-delay: 0ms;
+      }
+      &::after {
+        color: rgba(255,255,255,1);
+      }
+      &:not(:checked) {
+        background: rgba(0,0,0,0.175);
+      }
+      span {
+        opacity: 1;
+      }
+    }
+    span {
+      display: inherit;
+      width: calc(100% - 2.5rem);
+      padding: 0 0.5rem;
+      opacity: 0;
+      overflow: hidden;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: 500ms ease;
+    }
+  }
+  @at-root input[data-fn="language"] {
+    display: none;
+    &:checked {
+      + label {
+        flex: 1 1 100%;
+        box-shadow: 0 0 0 0.125rem white inset;
+        &::after {
+          content: $language-alternative;
+          color: rgba(255,255,255,1);
+          box-shadow: 0 0 0 0.125rem white inset;
+          transform: rotate(360deg);
+        }
+        &::before {
+          opacity: 0;
+          transition-delay: 0ms;
+        }
+        span {
+          text-indent: 7%;
+          opacity: 1;
+        }
+      }
+    }
+  }
+  @include viewport(xs) {
+    flex-wrap: wrap;
+    margin: 0;
+    label.language {
+      flex: 1 0 100%;
+      margin: 0 0 0.5rem 0;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      &::before {
+        opacity: 0;
+      }
+      span {
+        opacity: 1;
+        text-indent: 7%;
+      }
+    }
+  }
+}

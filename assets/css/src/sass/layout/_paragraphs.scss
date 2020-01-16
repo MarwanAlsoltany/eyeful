@@ -1,0 +1,26 @@
+p {
+  color: rgba(0,0,0,0.85);
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0 0 1rem 0;
+  &:last-child {
+    margin: 0;
+  }
+}
+
+a:not(.button) {
+  color: $purple;
+  transition: 300ms;
+  text-decoration: none;
+  &:focus {
+    outline: none;
+  }
+  &:hover {
+    background: rgba(0,0,0,0.15);
+  }
+}
+
+.mono {
+  font-family: $mono;
+  user-select: text;
+}

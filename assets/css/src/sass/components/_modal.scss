@@ -1,0 +1,198 @@
+#modal {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.5);
+  // @extend %backdrop;
+  padding: 1rem;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  filter: blur(0);
+  transition: 500ms ease;
+  visibility: hidden;
+  opacity: 0;
+  cursor: alias;
+  pointer-events: none;
+  &.open {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+    form[data-fn="form"] {
+      animation: scale-up 500ms ease 1 forwards;
+    }
+  }
+  &:not(.open) {
+    animation-duration: 300ms;
+    transition-duration: 300ms;
+    form[data-fn="form"] {
+      [data-fn] {
+        visibility: hidden;
+        transition: none;
+      }
+    }
+  }
+  &.simple {
+    form[data-fn="form"] {
+      max-width: 30rem;
+      label {
+        display: none;
+      }
+      input[type=button],
+      input[type=reset] {
+        flex: 1 0 auto;
+      }
+    }
+  }
+  &.consent {
+    form[data-fn="form"] {
+      max-width: 35rem;
+      label,
+      input[type=text] {
+        display: none;
+      }
+      input[type=button],
+      input[type=reset] {
+        flex: 1 0 auto;
+      }
+    }
+  }
+  body.mdm & {
+    background: rgba(0,0,0,0.075);
+    form[data-fn="form"] {
+      border: 2px solid rgba(0,0,0,0.55);
+      filter: invert(1);
+      h3[data-fn="heading"] {
+        background: transparent;
+        -webkit-text-fill-color: rgba(0,0,0,0.65);
+      }
+    }
+  }
+  @at-root form[data-fn="form"] {
+    align-self: center;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    justify-content: flex-end;
+    width: 100%;
+    max-width: 40rem;
+    height: auto;
+    max-height: 80vh;
+    background: rgba(255,255,255,1);
+    font-size: 1.625rem;
+    font-weight: 600;
+    line-height: 1.625rem;
+    padding: 1.75rem 1.5rem 1.5rem 1.5rem;
+    margin: 0 auto;
+    border-radius: $border-radius;
+    cursor: auto;
+    transition: 500ms ease;
+    animation: scale-down 500ms ease 1 forwards;
+    > *:not(h3):not(p) {
+      min-height: 3rem;
+      font-size: 1rem;
+      line-height: 1;
+      padding: 0.875rem 1.125rem;
+      border: 2px solid rgba(0,0,0,0.55);
+      border-radius: $border-radius;
+      margin: 0.5rem;
+      outline: 0;
+    }
+    h3[data-fn="heading"] {
+      flex: 1 1 auto;
+      order: 0;
+      background: linear-gradient(67deg, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.25) 100%), linear-gradient(67deg, $purple 0%, $blue 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-size: inherit;
+      line-height: 1.25;
+      margin: 0 0.5rem;
+      padding: 0 0 0.5rem 0;
+      user-select: none;
+      body.mdm & {
+        background: transparent;
+        -webkit-text-fill-color: rgba(0,0,0,0.65);
+      }
+    }
+    p[data-fn="message"] {
+      flex: 1 1 100%;
+      font-size: 1rem;
+      font-weight: 500;
+      margin: 0 0.5rem;
+    }
+    label[data-fn="current"] {
+      flex: 1 1 auto;
+      order: 2;
+      background: rgba(255, 255, 255, 1);
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1.15;
+      position: relative;
+      cursor: text;
+      &::before {
+        content: attr(title);
+        display: inline-block;
+        width: auto;
+        height: 12px;
+        background: rgba(255, 255, 255, 1);
+        color: rgba(0,0,0,0.55);
+        font-size: 12px;
+        font-weight: 600;
+        font-variant: all-petite-caps;
+        line-height: 9px;
+        letter-spacing: 1px;
+        padding: 0 6px;
+        position: absolute;
+        top: -6px;
+        left: 12px;
+      }
+    }
+    input[data-fn="text"] {
+      flex: 1 1 100%;
+      order: 1;
+      background: rgba(0,0,0,0.35);
+      color: rgba(255,255,255,1);
+      word-break: break-word;
+      word-wrap: break-word;
+      border: 0;
+      transition: 500ms ease;
+      &:focus {
+        background: rgba(0,0,0,0.55);
+        border: 0;
+      }
+      &::placeholder {
+        color: rgba(255,255,255,0.75);
+      }
+    }
+    input[data-fn="submit"],
+    input[data-fn="cancel"] {
+      flex: 0 0 auto;
+      order: 3;
+      background: rgba(255, 255, 255, 1);
+      color: rgba(0,0,0,0.55);
+      font-weight: 800;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: 500ms ease;
+      &:hover {
+        background-color: rgba(0,0,0,0.55);
+        color: rgba(255, 255, 255, 1);
+      }
+      &:active {
+        opacity: 0.75;
+      }
+    }
+    @include viewport(xs) {
+      label[data-fn="current"] {
+        flex: 1 1 100%;
+      }
+      input[data-fn="submit"],
+      input[data-fn="cancel"] {
+        flex: 1 0 auto;
+      }
+    }
+  }
+}

@@ -1,0 +1,333 @@
+.control-center {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: flex-end;
+  justify-content: flex-start;
+  width: 100%;
+  height: $edges-height;
+  position: fixed;
+  top: $titlebar-height + 0;
+  z-index: 2;
+  user-select: none;
+  transition: 500ms ease, 
+              top 1500ms 500ms ease-in-out;
+  > div {
+    background: rgba(255,255,255,0.5);
+  }
+  &.expanded {
+    height: if($titlebar-height != 0, calc(100vh - #{$titlebar-height}), 100vh);
+    .bar {
+      border-bottom-color: rgba(0,0,0,0.25);
+      #hamburger {
+        span {
+          &:nth-child(1) {
+            top: 10px;
+            transform: rotate(-45deg);
+          }
+          &:nth-child(2) {
+            width: 0;
+            left: 24px;
+            opacity: 0;
+          }
+          &:nth-child(3) {
+            top: 10px;
+            transform: rotate(45deg);
+          }
+          &::after {
+            background: transparent;
+          }
+        }
+      }
+    }
+    .settings {
+      max-height: 100vh;
+      > div {
+        opacity: 1;
+      }
+    }
+    ~ .static {
+      filter: blur(1rem);
+      pointer-events: none;
+    }
+  }
+  .bar {
+    flex: 0 0 2.875rem;
+    width: 100%;
+    height: auto;
+    @extend %backdrop;
+    border-left: 1rem solid transparent;
+    border-right: 1rem solid transparent;
+    border-bottom: 1px solid transparent;
+    font-size: 0;
+    margin: 0 auto;
+    box-shadow: 0 0 10px 5px rgba(0,0,0,0.095);
+    transition: border 500ms ease;
+    position: relative;
+  }
+  .settings {
+    flex: 0 1 auto;
+    width: 100%;
+    height: auto;
+    max-height: 0;
+    box-shadow: inset 0px 12px 8px -10px rgba(0,0,0,0.15),
+                      0px 12px 8px -10px rgba(0,0,0,0.15);
+    transition: max-height 500ms ease;
+    overflow-y: scroll;
+    overscroll-behavior-y: contain;
+    @extend %no-scrollbar;
+    > div {
+      opacity: 0;
+      transition: all 500ms ease;
+    }
+  }
+  .pack {
+    padding-bottom: $edges-height + 0.5rem;
+    .cell-inner {
+      background: rgba(0,0,0,0.25);
+      color: rgba(255,255,255,1);
+      padding: 2rem 1.5rem;
+      margin: 0;
+      transition: inherit;
+      border-radius: $border-radius;
+      &:hover {
+        background: rgba(0,0,0,0.5);
+      }
+    }
+  }
+  h3 {
+    color: rgba(255,255,255,1);
+    font-size: 2rem;
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: 1px;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(0,0,0,0.25);
+    margin: 0 0 1rem 0;
+    transition: 500ms ease;
+    &.flexed {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+  .option {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    .caption {
+      flex: 0 1 auto;
+      vertical-align: bottom;
+      font-size: 1.125rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      margin-right: 0.5rem;
+      @include viewport(sm, max) {
+        &.pc-only {
+          &::after {
+            content: $pseudo-space $toggle-placeholder;
+            font-family: quote(#{$typeface}), quote(#{$typeicon});
+          }
+        }
+      }
+    }
+    .toggle {
+      flex: 0 0 auto;
+      vertical-align: bottom;
+    }
+  }
+  .controls {
+    line-height: 0;
+    @include dir-swap((
+      text-align: right
+    ), null, false);
+    .action {
+      display: inline-block;
+      min-width: 2.75rem;
+      height: 1.5rem;
+      background: rgba(0,0,0,0.25);
+      font-size: 0.75rem;
+      font-weight: 800;
+      font-weight: 600;
+      line-height: 1.5rem;
+      text-align: center;
+      text-transform: uppercase;
+      padding: 0 0.5rem;
+      margin: 0.25rem 0;
+      border-radius: 1.5rem;
+      transition: 500ms ease;
+      &[role="button"] {
+        cursor: pointer;
+        &:hover {
+          background: rgba(0,0,0,0.5);
+        }
+        &:active {
+          opacity: 0.5;
+        }
+      }
+    }
+  }
+}
+#indicator {
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  width: calc((3 * 20px) + ((2 * 2px) * 2));
+  background: rgba(0,0,0,0.35);
+  padding: 2px;
+  border-radius: calc((1 * 20px) + (2 * 2px));
+  position: absolute;
+  top: 50%;
+  @include dir-swap((
+    left: 0,
+  ));
+  transform: translateY(-50%);
+  transition: 500ms cubic-bezier(0.65, -0.45, 0.35, 1.45);
+  span {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    transition: 500ms 250ms cubic-bezier(0.65, -0.45, 0.35, 1.45);
+    &:nth-child(1) {
+      background: transparentize(orangered, 0.75);
+    }
+    &:nth-child(2) {
+      background: transparentize(orange, 0.75);
+    }
+    &:nth-child(3) {
+      background: transparentize(limegreen, 0.75);
+    }
+  }
+  &.running {
+    span:nth-child(1) {
+      background: orangered;
+    }
+  }
+  &.waiting {
+    span:nth-child(2) {
+      background: orange;
+    }
+  }
+  &.willing {
+    span:nth-child(3) {
+      background: limegreen;
+    }
+  }
+  &:not([class$="g"]) {
+    width: 24px;
+    background: transparent;
+    box-shadow: inset 0 0 0 4px rgba(0,0,0,0.35);
+    span {
+      background: transparent;
+      &:not(:nth-child(2)) {
+        width: 0;
+        height: 0;
+        visibility: hidden;
+        opacity: 0;
+      }
+    }
+  }
+}
+#launch-time {
+  visibility: visible;
+  opacity: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 500ms ease;
+  span {
+    color: rgba(0,0,0,0.35);
+    font-size: 1rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    &:nth-child(1) {
+      @include dir-swap((
+        margin-right: 1rem
+      ));
+      @include viewport(xs, max) {
+        display: none;
+      }
+    }
+    &:nth-child(2) {
+      font-weight: 600;
+      letter-spacing: 1px;
+      @include viewport(ms, max) {
+        display: none;
+      }
+    }
+  }
+  body.mam & {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+#hamburger {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 50%;
+  @include dir-swap((
+    right: 0
+  ));
+  transform: translateY(-50%);
+  transition: 500ms ease-in-out;
+  cursor: pointer;
+  span {
+    width: 100%;
+    height: 4px;
+    background: rgba(0,0,0,0.35);
+    border-radius: 4px;
+    position: absolute;
+    left: 0;
+    transition: 500ms cubic-bezier(0.65, -0.45, 0.35, 1.45);
+    &::after {
+      content: '';
+      display: inline-block;
+      width: 2px;
+      height: 8px;
+      background: rgba(0,0,0,0.35);
+      border-radius: 4px;
+      position: absolute;
+      top: -2px;
+      left: 6px;
+      transition: all 500ms ease;
+    }
+    &:nth-child(1) {
+      top: 2px;
+      &::after {
+        transition: all 500ms ease,
+                    left 500ms 250ms ease;
+      }
+    }
+    &:nth-child(2) {
+      top: 10px;
+      &::after {
+        left: 16px;
+      }
+    }
+    &:nth-child(3) {
+      top: 18px;
+    }
+  }
+  &:hover {
+    span {
+      &:nth-child(1)::after,
+      &:nth-child(3)::after {
+        left: 16px;
+      }
+      &:nth-child(2)::after {
+        left: 6px;
+      }
+    }
+  }
+}

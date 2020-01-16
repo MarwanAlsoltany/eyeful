@@ -1,0 +1,200 @@
+#notifications-bar {
+  width: auto;
+  max-width: 27rem;
+  height: auto;
+  visibility: hidden;
+  opacity: 0;
+  background-image: linear-gradient(67deg, rgba(0,0,0,0.1625) 0%, rgba(0,0,0,0.1625) 100%), 
+                    linear-gradient(67deg, rgba($purple, 0.75) 25%, rgba($blue, 0.75) 75%);
+  @extend %backdrop;
+  box-shadow: 0px 2px 5px 3px rgba(0, 0, 0, 0.125);
+  color: rgba(255,255,255,1);
+  text-align: center;
+  border: 0.125rem solid rgba(255,255,255,1);
+  border-radius: $border-radius;
+  padding: 0.75rem;
+  margin: 0 auto;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+  transition: all 500ms cubic-bezier(0.75, -0.75, 0.55, 1.05);
+  user-select: none;
+  cursor: wait;
+  &.notify {
+    visibility: visible;
+    opacity: 1;
+    bottom: $edges-padding;
+    transition: all 500ms cubic-bezier(reverse-cubic-bezier(0.75, -0.75, 0.55, 1.05));
+    &:hover {
+      animation: shake 100ms ease 100ms 2;
+    }
+    &.attention {
+      box-shadow: 0 0 0 0.25rem orangered !important;
+    }
+  }
+  @include viewport(xs, max) {
+    width: calc(100% - 2rem);
+    &.notify {
+      bottom: 9.5rem;
+    }
+  }
+  body.mdm & {
+    background: rgba($dark, 0.85);
+  }
+  body.mem &,
+  body:not(.mam) & {
+    @include viewport(lg, min) {
+      width: calc((100% * 0.666666666) - (1rem * 0.333333333));
+      max-width: unset;
+      min-height: $edges-height;
+      background: rgba(255,255,255,0.75);
+      color: transparent;
+      font-weight: 500;
+      border: none;
+      border-radius: $border-radius $border-radius 0 0;
+      padding: 1rem 0.75rem;
+      margin: 0;
+      box-shadow: 0 0 0 0 rgba(255,255,255,0.25);
+      @include dir-swap((
+        left: 0,
+        right: auto
+      ), null, false);
+      bottom: $edges-height * -2;
+      transition: all 500ms ease,
+                  color 250ms 500ms ease-in-out,
+                  box-shadow 500ms 500ms ease;
+      cursor: auto;
+      br {
+        display: none;
+        content: $pseudo-space;
+        &::after {
+          content: $pseudo-nbsp;
+        }
+      }
+      &.notify {
+        color: rgba(0,0,0,0.85);
+        box-shadow: 0 0 0 0.75rem rgba(255,255,255,0);
+        bottom: -0.25rem; // minus line-height
+      }
+      &:hover {
+        min-height: $edges-height + 0.5rem;
+        background: rgba(255,255,255,1);
+        color: rgba(0,0,0,0.75);
+        visibility: visible;
+        opacity: 1;
+        bottom: -0.25rem; // minus line-height
+        animation: none;
+      }
+    }
+  }
+  body.mem & {
+    @include viewport(lg, min) {
+      width: calc((100% * 0.5) - (1rem / 2));
+    }
+  }
+}
+#notifications-log {
+  @include disabled('after', '', '.gnl');
+  &::after {
+    @include lang-content($notifications-placeholder);
+  }
+  ol, ul {
+    width: 100%;
+    height: 15.625rem;
+    background: rgba(0,0,0,0.25);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-radius: $border-radius;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    overscroll-behavior-y: none;
+    @extend %no-scrollbar;
+    position: relative;
+    transition: 500ms ease;
+    position: relative;
+    @include pseudo-note('before', '');
+    &::before {
+      @include lang-content($notification-alternative);
+    }
+    &::after,
+    &::before {
+      font-size: 1rem;
+      font-weight: 400;
+    }
+    li {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      align-items: flex-start;
+      justify-content: space-between;
+      width: auto;
+      height: auto;
+      color: rgba(255,255,255,0.75);
+      padding: calc(1rem + (0.25rem / 4)) 1rem;
+      position: relative;
+      transition: 500ms ease;
+      cursor: pointer;
+      animation: fade 500ms ease 1;
+      &:nth-child(odd) {
+        background: rgba(0,0,0,0.15);
+      }
+      &:nth-last-child(1):not(:nth-child(1)):not(:nth-child(2)):not(:nth-child(3)):not(:nth-child(4)) {
+        position: relative;
+        &::after {
+          content: $go-up-placeholder;
+          font: $font-awesome;
+          width: 3.375rem;
+          height: 3.375rem;
+          background: rgba(0,0,0,0.35);
+          font-size: 1.75rem;
+          line-height: 3.15rem;
+          text-align: center;
+          border-radius: 50%;
+          position: absolute;
+          top: -3.375rem;
+          left: 50%;
+          transform: translateX(-50%);
+          z-index: -1;
+          opacity: 0;
+          animation: attention 5000ms ease 1000ms 1 forwards;
+        }
+      }
+      &::before {
+        @include lang-content($notification-placeholder);
+        font-size: 0;
+        font-style: italic;
+        opacity: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: 500ms cubic-bezier(0.65, -0.45, 0.35, 1.45);
+      }
+      &:hover {
+        background: rgba(0,0,0,0.45);
+        color: transparent;
+        text-shadow: 0 0 0.265rem rgba(255,255,255,0.65);
+        &::before {
+          color: rgba(255,255,255,0.75);
+          font-size: 0.875rem;
+          text-shadow: 0 0 0.155rem rgba(0,0,0,0.25);
+          opacity: 1;
+        }
+      }
+      &:active {
+        background: rgba(0,0,0,0.65);
+      }
+      // span {}
+      time {
+        font-weight: 800;
+        letter-spacing: 1px;
+        @include dir-swap((
+          padding-left: 1rem
+        ));
+      }
+    }
+  }
+}

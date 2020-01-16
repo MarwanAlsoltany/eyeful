@@ -1,0 +1,15 @@
+:not(textarea)::placeholder {
+  font-style: italic;
+  @include dir-swap((), (
+    font-style: normal,
+    transform: skewX(10deg)
+  ), false);
+}
+input,
+template,
+button,
+.button {
+  &:focus {
+    box-shadow: 0 0 4px 0px rgba(0,0,0,0.175);
+  }
+}

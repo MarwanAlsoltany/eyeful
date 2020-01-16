@@ -1,0 +1,230 @@
+/*===================== MONTSERRAT =====================*/
+/* montserrat-100 - latin-ext_latin */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 100;
+  src: local('Montserrat Thin'), local('Montserrat-Thin'),
+       url('#{$font-path}/montserrat/montserrat-v13-latin-ext_latin-100.woff2') format('woff2'),
+       url('#{$font-path}/montserrat/montserrat-v13-latin-ext_latin-100.woff') format('woff');
+}
+/* montserrat-100italic - latin-ext_latin */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: italic;
+  font-weight: 100;
+  src: local('Montserrat Thin Italic'), local('Montserrat-ThinItalic'),
+       url('#{$font-path}/montserrat/montserrat-v13-latin-ext_latin-100italic.woff2') format('woff2'),
+       url('#{$font-path}/montserrat/montserrat-v13-latin-ext_latin-100italic.woff') format('woff');
+}
+/* montserrat-200 - latin-ext_latin */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 200;
+  src: local('Montserrat ExtraLight'), local('Montserrat-ExtraLight'),
+       url('#{$font-path}/montserrat/montserrat-v13-latin-ext_latin-200.woff2') format('woff2'),
+       url('#{$font-path}/montserrat/montserrat-v13-latin-ext_latin-200.woff') format('woff');
+}
+/* montserrat-200italic - latin-ext_latin */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: italic;
+  font-weight: 200;
+  src: local('Montserrat ExtraLight Italic'), local('Montserrat-ExtraLightItalic'),
+       url('#{$font-path}/montserrat/montserrat-v13-latin-ext_latin-200italic.woff2') format('woff2'),
+       url('#{$font-path}/montserrat/montserrat-v13-latin-ext_latin-200italic.woff') format('woff');
+}
+/* montserrat-300 - latin-ext_latin */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Montserrat Light'), local('Montserrat-Light'),
+       url('#{$font-path}/montserrat/montserrat-v13-latin-ext_latin-300.woff2') format('woff2'),
+       url('#{$font-path}/montserrat/montserrat-v13-latin-ext_latin-300.woff') format('woff');
+}
+/* montserrat-300italic - latin-ext_latin */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: italic;
+  font-weight: 300;
+  src: local('Montserrat Light Italic'), local('Montserrat-LightItalic'),
+       url('#{$font-path}/montserrat/montserrat-v13-latin-ext_latin-300italic.woff2') format('woff2'),
+       url('#{$font-path}/montserrat/montserrat-v13-latin-ext_latin-300italic.woff') format('woff');
+}
+/* montserrat-regular - latin-ext_latin */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Montserrat Regular'), local('Montserrat-Regular'),
+       url('#{$font-path}/montserrat/montserrat-v13-latin-ext_latin-regular.woff2') format('woff2'),
+       url('#{$font-path}/montserrat/montserrat-v13-latin-ext_latin-regular.woff') format('woff');
+}
+/* montserrat-italic - latin-ext_latin */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Montserrat Italic'), local('Montserrat-Italic'),
+       url('#{$font-path}/montserrat/montserrat-v13-latin-ext_latin-italic.woff2') format('woff2'),
+       url('#{$font-path}/montserrat/montserrat-v13-latin-ext_latin-italic.woff') format('woff');
+}
+/* montserrat-500 - latin-ext_latin */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Montserrat Medium'), local('Montserrat-Medium'),
+       url('#{$font-path}/montserrat/montserrat-v13-latin-ext_latin-500.woff2') format('woff2'),
+       url('#{$font-path}/montserrat/montserrat-v13-latin-ext_latin-500.woff') format('woff');
+}
+/* montserrat-500italic - latin-ext_latin */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: italic;
+  font-weight: 500;
+  src: local('Montserrat Medium Italic'), local('Montserrat-MediumItalic'),
+       url('#{$font-path}/montserrat/montserrat-v13-latin-ext_latin-500italic.woff2') format('woff2'),
+       url('#{$font-path}/montserrat/montserrat-v13-latin-ext_latin-500italic.woff') format('woff');
+}
+/* montserrat-600 - latin-ext_latin */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Montserrat SemiBold'), local('Montserrat-SemiBold'),
+       url('#{$font-path}/montserrat/montserrat-v13-latin-ext_latin-600.woff2') format('woff2'),
+       url('#{$font-path}/montserrat/montserrat-v13-latin-ext_latin-600.woff') format('woff');
+}
+/* montserrat-600italic - latin-ext_latin */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: italic;
+  font-weight: 600;
+  src: local('Montserrat SemiBold Italic'), local('Montserrat-SemiBoldItalic'),
+       url('#{$font-path}/montserrat/montserrat-v13-latin-ext_latin-600italic.woff2') format('woff2'),
+       url('#{$font-path}/montserrat/montserrat-v13-latin-ext_latin-600italic.woff') format('woff');
+}
+/* montserrat-700 - latin-ext_latin */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Montserrat Bold'), local('Montserrat-Bold'),
+       url('#{$font-path}/montserrat/montserrat-v13-latin-ext_latin-700.woff2') format('woff2'),
+       url('#{$font-path}/montserrat/montserrat-v13-latin-ext_latin-700.woff') format('woff');
+}
+/* montserrat-700italic - latin-ext_latin */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: italic;
+  font-weight: 700;
+  src: local('Montserrat Bold Italic'), local('Montserrat-BoldItalic'),
+       url('#{$font-path}/montserrat/montserrat-v13-latin-ext_latin-700italic.woff2') format('woff2'),
+       url('#{$font-path}/montserrat/montserrat-v13-latin-ext_latin-700italic.woff') format('woff');
+}
+/* montserrat-800 - latin-ext_latin */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 800;
+  src: local('Montserrat ExtraBold'), local('Montserrat-ExtraBold'),
+       url('#{$font-path}/montserrat/montserrat-v13-latin-ext_latin-800.woff2') format('woff2'),
+       url('#{$font-path}/montserrat/montserrat-v13-latin-ext_latin-800.woff') format('woff');
+}
+/* montserrat-800italic - latin-ext_latin */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: italic;
+  font-weight: 800;
+  src: local('Montserrat ExtraBold Italic'), local('Montserrat-ExtraBoldItalic'),
+       url('#{$font-path}/montserrat/montserrat-v13-latin-ext_latin-800italic.woff2') format('woff2'),
+       url('#{$font-path}/montserrat/montserrat-v13-latin-ext_latin-800italic.woff') format('woff');
+}
+/* montserrat-900 - latin-ext_latin */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 900;
+  src: local('Montserrat Black'), local('Montserrat-Black'),
+       url('#{$font-path}/montserrat/montserrat-v13-latin-ext_latin-900.woff2') format('woff2'),
+       url('#{$font-path}/montserrat/montserrat-v13-latin-ext_latin-900.woff') format('woff');
+}
+/* montserrat-900italic - latin-ext_latin */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: italic;
+  font-weight: 900;
+  src: local('Montserrat Black Italic'), local('Montserrat-BlackItalic'),
+       url('#{$font-path}/montserrat/montserrat-v13-latin-ext_latin-900italic.woff2') format('woff2'),
+       url('#{$font-path}/montserrat/montserrat-v13-latin-ext_latin-900italic.woff') format('woff');
+}
+
+@if $font-arabic {
+  /*===================== TAJAWAL =====================*/
+  /* tajawal-200 - arabic */
+  @font-face {
+    font-family: 'Tajawal';
+    font-style: normal;
+    font-weight: 200;
+    src: local('Tajawal ExtraLight'), local('Tajawal-ExtraLight'),
+        url('#{$font-path}/tajawal/tajawal-v2-arabic-200.woff2') format('woff2'),
+        url('#{$font-path}/tajawal/tajawal-v2-arabic-200.woff') format('woff');
+  }
+  /* tajawal-300 - arabic */
+  @font-face {
+    font-family: 'Tajawal';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Tajawal Light'), local('Tajawal-Light'),
+        url('#{$font-path}/tajawal/tajawal-v2-arabic-300.woff2') format('woff2'),
+        url('#{$font-path}/tajawal/tajawal-v2-arabic-300.woff') format('woff');
+  }
+  /* tajawal-regular - arabic */
+  @font-face {
+    font-family: 'Tajawal';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Tajawal'), local('Tajawal-Regular'),
+        url('#{$font-path}/tajawal/tajawal-v2-arabic-regular.woff2') format('woff2'),
+        url('#{$font-path}/tajawal/tajawal-v2-arabic-regular.woff') format('woff');
+  }
+  /* tajawal-500 - arabic */
+  @font-face {
+    font-family: 'Tajawal';
+    font-style: normal;
+    font-weight: 500;
+    src: local('Tajawal Medium'), local('Tajawal-Medium'),
+        url('#{$font-path}/tajawal/tajawal-v2-arabic-500.woff2') format('woff2'),
+        url('#{$font-path}/tajawal/tajawal-v2-arabic-500.woff') format('woff');
+  }
+  /* tajawal-700 - arabic */
+  @font-face {
+    font-family: 'Tajawal';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Tajawal Bold'), local('Tajawal-Bold'),
+        url('#{$font-path}/tajawal/tajawal-v2-arabic-700.woff2') format('woff2'),
+        url('#{$font-path}/tajawal/tajawal-v2-arabic-700.woff') format('woff');
+  }
+  /* tajawal-800 - arabic */
+  @font-face {
+    font-family: 'Tajawal';
+    font-style: normal;
+    font-weight: 800;
+    src: local('Tajawal ExtraBold'), local('Tajawal-ExtraBold'),
+        url('#{$font-path}/tajawal/tajawal-v2-arabic-800.woff2') format('woff2'),
+        url('#{$font-path}/tajawal/tajawal-v2-arabic-800.woff') format('woff');
+  }
+  /* tajawal-900 - arabic */
+  @font-face {
+    font-family: 'Tajawal';
+    font-style: normal;
+    font-weight: 900;
+    src: local('Tajawal Black'), local('Tajawal-Black'),
+        url('#{$font-path}/tajawal/tajawal-v2-arabic-900.woff2') format('woff2'),
+        url('#{$font-path}/tajawal/tajawal-v2-arabic-900.woff') format('woff');
+  }
+}

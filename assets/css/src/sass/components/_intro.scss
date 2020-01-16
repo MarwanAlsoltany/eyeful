@@ -1,0 +1,70 @@
+#intro {
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.25);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  overflow: hidden;
+  visibility: hidden;
+  opacity: 0;
+  filter: blur(0);
+  transition: 500ms ease;
+  cursor: none;
+  user-select: none;
+  pointer-events: none;
+  &.employed {
+    visibility: visible;
+    opacity: 1;
+    ~ * {
+      filter: blur(5rem);
+      pointer-events: none;
+      > * {
+        transition: none;
+        opacity: 0;
+      }
+    }
+    ~ .dynamic {
+      bottom: -1 * $edges-height;
+    }
+    ~ .control-center {
+      top: -1 * $edges-height;
+    }
+  }
+  img {
+    width: 0;
+    height: auto;
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -40%);
+    animation: intro 5750ms ease 1000ms 1;
+    @include viewport(md, max) {
+      animation: intro-small 5750ms ease 1000ms 1;
+    }
+    @include viewport(xs, max) {
+      width: 35%;
+      animation: none;
+    }
+  }
+  span {
+    width: 100%;
+    color: rgba(255,255,255, 0.5);
+    font-size: 1.5rem;
+    font-weight: 200;
+    font-weight: 300;
+    letter-spacing: 1px;
+    position: absolute;
+    left: 0;
+    bottom: 25%;
+    text-align: center;
+    visibility: hidden;
+    opacity: 0;
+    animation: fade 700ms ease 300ms 1 forwards;
+    &:last-of-type {
+      bottom: calc(25% - 2rem);
+      animation: fade 700ms ease 300ms 10 alternate;
+    }
+  }
+}

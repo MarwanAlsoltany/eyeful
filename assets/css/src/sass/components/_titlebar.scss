@@ -1,0 +1,22 @@
+@if ($titlebar-height != 0) {
+  div.titlebar {
+    -webkit-app-region: drag;
+    width: 100%;
+    height: $titlebar-height;
+    // background-color: rgba(255,255,255,0.5);
+    background-color: $purple;
+    // background-image: linear-gradient(67deg, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.25) 100%), 
+    //                   linear-gradient(67deg, $purple 25%, $blue 75%);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    position: fixed;
+    z-index: 6;
+    top: 0;
+    left: 0;
+    + div {
+      top: $titlebar-height;
+    }
+  }
+}
+
+// SCSS: if($titlebar-height != 0, calc(100% - #{$titlebar-height}), 100%)
+// HTML: <div class="titlebar"></div>

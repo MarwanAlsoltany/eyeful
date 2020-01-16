@@ -1,0 +1,180 @@
+$app-name: 'Private Eye';
+$languages: ('en', 'de', 'nl', 'fr', 'es', 'ar');
+$purple: rgba(155,0,155,1);
+$blue: rgba(0,135,235,1);
+$dark: rgba(42,42,42,1);
+$pattern: repeating-linear-gradient(
+  -45deg, 
+  rgba(0,0,0,0), 
+  rgba(0,0,0,0) 0.75rem, 
+  rgba(255,255,255,0.095) 0.75rem, 
+  rgba(255,255,255,0.095) 1.5rem
+);
+
+$typeface: 'Montserrat';
+$typeicon: 'FontAwesome';
+$khatt: 'Tajawal';
+$mono: 'Courier New', 'Courier', monospace;
+$base-size: 16px;
+$font-path: "../../fonts";
+$font-arabic: true;
+$font-root: 400 #{$base-size}/1.25 quote(#{$typeface}), if($font-arabic == true, quote(#{$khatt}), ''), sans-serif;
+$font-awesome: normal normal normal 100%/100% quote(#{$typeicon});
+$fa-font-path: "#{$font-path}/font-awesome";
+
+$media-queries: true;
+$media-breakpoints: (
+  ms: 320px,
+  xs: 576px,
+  sm: 768px,
+  md: 992px,
+  lg: 1280px,
+  xl: 1920px,
+  hg: 2560px
+);
+  
+$container: (
+  var-name: '--ui-width',
+  normal: 1480px,
+  wide: 1824px,
+  wider: 2560px,
+  widest: 100%
+);
+$container-width: var(unquote(map-get($container, 'var-name')));
+$fallback-width: map-get($container, 'normal');
+$titlebar-height: 0;
+// $titlebar-height: 2.875rem;
+$static-height: 47.375rem;
+$edges-height: 3rem;
+$edges-padding: 4rem;
+
+// global
+$outer-shadow: rgba(0,0,0,0.095);
+$inner-shadow: rgba(0,0,0,0.095);
+$border-radius: 0.625rem;
+
+// table colors
+$border-color: rgba(255,255,255,0.15);
+$rows-odd: rgba(0,0,0,0.175);
+$rows-even: rgba(0,0,0,0.045);
+$hover-state: rgba(255,255,255,0.085);
+$rows-odd-darker: rgba(0,0,0,0.175 * 2.85);
+$rows-even-darker: rgba(0,0,0,0.045 * 7.25);
+$hover-state-darker: rgba(255,255,255,0.085 * 0.0285);
+
+
+@import "../vendor/font-awesome/variables";
+$pseudo-br: '\a';
+$pseudo-nbsp: '\00a0';
+$pseudo-space: '\0020';
+$copyright-placeholder: #{$fa-var-copyright};
+$toggle-placeholder: '#{$fa-var-television}';
+$go-up-placeholder: '#{$fa-var-chevron-up}';
+$dashboard-placeholder: '#{$fa-var-ban}';
+$alarm-placeholder: '#{$fa-var-bell-slash}';
+$alarm-alternative: '#{$fa-var-bell}';
+$language-placeholder: '#{$fa-var-flag}';
+$language-alternative: '#{$fa-var-check}';
+
+$times-placeholder: (
+  en: "Click on #{$fa-var-play-circle} to start an entry, then on #{$fa-var-stop-circle} when you're finished. On #{$fa-var-plus-circle} if you'd like to add it to your register or #{$fa-var-minus-circle} to reset the Timer. You can always flip #{$fa-var-refresh} to add entries; if the timer is started already.",
+  de: "Klicke auf #{$fa-var-play-circle}, um einen Eintrag zu starten, und dann auf #{$fa-var-stop-circle}, wenn du fertig bist. Auf #{$fa-var-plus-circle}, wenn du den zu deinem Register hinzufügen möchten, oder #{$fa-var-minus-circle}, um den Timer zurückzusetzen. Du kannst jederzeit #{$fa-var-refresh} Flippen, um Einträge hinzuzufügen. wenn der Timer bereits gestartet ist. ",
+  nl: "Klik op #{$fa-var-play-circle} om een ​​invoer te starten en vervolgens op #{$fa-var-stop-circle} als je klaar daarmee bent. Op #{$fa-var-plus-circle} als je hem aan jouw register wilt toevoegen of #{$fa-var-minus-circle} om de Timer te resetten. Jij kan altijd #{$fa-var-refresh} flippen om invoeren toe te voegen; als de timer al is gestart. ",
+  fr: "Cliquez sur #{$fa-var-play-circle} pour commencer une entrée, puis sur #{$fa-var-stop-circle} lorsque vous avez terminé. Dans #{$fa-var-plus-circle} si vous souhaitez l'ajouter à votre enregistrement ou #{$fa-var-minus-circle} pour réinitialiser le chronomètre. Vous pouvez toujours retourner #{$fa-var-refresh} pour ajouter des entrées; Si la minuterie a déjà commencé.",
+  es: "Haga clic en #{$fa-var-play-circle} para iniciar una entrada, luego en #{$fa-var-stop-circle} cuando haya terminado. En #{$fa-var-plus-circle} si desea agregarlo a su registro o #{$fa-var-minus-circle} para reiniciar el temporizador. Siempre puede voltear #{$fa-var-refresh} para añadir entradas; si el temporizador ya se ha iniciado.",
+  ar: "إنقر على #{$fa-var-play-circle} لبدء إدخال جديد ، ثم على #{$fa-var-stop-circle} عند الانتهاء . على #{$fa-var-plus-circle} إذا كنت ترغب في إضافته إلى السجل الخاص بك أو على #{$fa-var-minus-circle} لإعادة ضبط المؤقت . يمكنك دائمًا القَلِب #{$fa-var-refresh} لإضافة إدخالات ؛ إذا كان المؤقت قد تم تشغيلهُ سابقاً . "
+);
+$times-alternative: (
+  en: "Click on #{$fa-var-play-circle} to start an entry, then on #{$fa-var-stop-circle} when you're finished. On #{$fa-var-plus-circle} if you'd like to add it to your register or #{$fa-var-minus-circle} to reset the Timer. You can always flip #{$fa-var-refresh} to add entries; if the timer is started already.",
+  de: "Klicke auf #{$fa-var-play-circle}, um einen Eintrag zu starten, und dann auf #{$fa-var-stop-circle}, wenn du fertig bist. Auf #{$fa-var-plus-circle}, wenn du den zu deinem Register hinzufügen möchten, oder #{$fa-var-minus-circle}, um den Timer zurückzusetzen. Du kannst jederzeit #{$fa-var-refresh} Flippen, um Einträge hinzuzufügen. wenn der Timer bereits gestartet ist. ",
+  nl: "Klik op #{$fa-var-play-circle} om een ​​invoer te starten en vervolgens op #{$fa-var-stop-circle} als je klaar daarmee bent. Op #{$fa-var-plus-circle} als je hem aan jouw register wilt toevoegen of #{$fa-var-minus-circle} om de Timer te resetten. Jij kan altijd #{$fa-var-refresh} flippen om invoeren toe te voegen; als de timer al is gestart. ",
+  fr: "Cliquez sur #{$fa-var-play-circle} pour commencer une entrée, puis sur #{$fa-var-stop-circle} lorsque vous avez terminé. Dans #{$fa-var-plus-circle} si vous souhaitez l'ajouter à votre enregistrement ou #{$fa-var-minus-circle} pour réinitialiser le chronomètre. Vous pouvez toujours retourner #{$fa-var-refresh} pour ajouter des entrées; Si la minuterie a déjà commencé.",
+  es: "Haga clic en #{$fa-var-play-circle} para iniciar una entrada, luego en #{$fa-var-stop-circle} cuando haya terminado. En #{$fa-var-plus-circle} si desea agregarlo a su registro o #{$fa-var-minus-circle} para reiniciar el temporizador. Siempre puede voltear #{$fa-var-refresh} para añadir entradas; si el temporizador ya se ha iniciado.",
+  ar: "إنقر على #{$fa-var-play-circle} لبدء إدخال جديد ، ثم على #{$fa-var-stop-circle} عند الانتهاء . على #{$fa-var-plus-circle} إذا كنت ترغب في إضافته إلى السجل الخاص بك أو على #{$fa-var-minus-circle} لإعادة ضبط المؤقت . يمكنك دائمًا القَلِب #{$fa-var-refresh} لإضافة إدخالات ؛ إذا كان المؤقت قد تم تشغيلهُ سابقاً . "
+);
+$times-placholder-mam: (
+  en: "#{$fa-var-info-circle} Check out keyborad shortcuts in Control Center, under Advanced; to get started.",
+  de: "#{$fa-var-info-circle} Schaue mal dich die Tastaturkürzel im Control Center unter Erweitert an, um zu beginnen.",
+  nl: "#{$fa-var-info-circle} Bekijk de klavier sneltoetsen in het Control Center, onder Geavanceerd; om te beginnen.",
+  fr: "#{$fa-var-info-circle} Découvrez les raccourcis clavier dans Control Center, sous Avancé; pour commencer.",
+  es: "#{$fa-var-info-circle} Compruebe los atajos de teclado en el Centro de control, en Avanzados; para empezar.",
+  ar: "#{$fa-var-info-circle} للبدء راجع إختصارات لوحة المفاتيح في مركز التحكم ، ضمن الإعدادات المتقدمة ."
+);
+$todos-placeholder: (
+  en: "Write your ToDos, before they vanish out of your mind!",
+  de: "Schreibe deine ToDos, bevor sie aus deinem Kopf verschwinden!",
+  nl: "Schrijf je ToDos, voordat ze uit jouw gedachten verdwijnen!",
+  fr: "Écrivez vos tâches, avant qu'ils ne disparaissent de votre esprit!",
+  es: "¡Escribe tus tareas, antes de que desaparezcan de tu mente!",
+  ar: "اكتب مهامك ، قبل أن تختفي من خاطِرَتك !"
+);
+$todos-alternative: (
+  en: "Write your ToDos, before they vanish out of your mind!",
+  de: "Schreibe deine ToDos, bevor sie aus deinem Kopf verschwinden!",
+  nl: "Schrijf je ToDos, voordat ze uit jouw gedachten verdwijnen!",
+  fr: "Écrivez vos tâches, avant qu'ils ne disparaissent de votre esprit!",
+  es: "¡Escribe tus tareas, antes de que desaparezcan de tu mente!",
+  ar: "اكتب مهامك ، قبل أن تختفي من خاطِرَتك !"
+);
+$notification-placeholder: (
+  en: "Click to Delete",
+  de: "Klicke zum Löschen",
+  nl: "Klik om te verwijderen",
+  fr: "Cliquez pour supprimer",
+  es: "Haga clic para eliminar",
+  ar: "أنقر للحذف"
+);
+$notification-alternative: (
+  en: "No Notifications",
+  de: "Keine Benachrichtigungen",
+  nl: "Geen meldingen",
+  fr: "Aucune notification",
+  es: "No Notificaciones",
+  ar: "لا يوجد إشعارات"
+);
+$notifications-placeholder: (
+  en: "Notification Log is toggled off",
+  de: "Benachrichtigungsprotokoll ist deaktiviert",
+  nl: "Meldingslogboek is uitgeschakeld",
+  fr: "Le journal des notifications est désactivé",
+  es: "El registro de notificaciones está desactivado",
+  ar: "سجل الإشعارات معطل حالياً"
+);
+$shortcuts-placeholder: (
+  en: "Keyboard Shorcuts are turned off on Mobile",
+  de: "Tastaturkürzel sind auf Mobilgeräten deaktiviert",
+  nl: "Klavier sneltoetsen zijn op mobiel uitgeschakeld",
+  fr: "Les raccourcis clavier sont désactivés sur mobile",
+  es: "Los atajos de teclado están desactivados en dispositivos móviles",
+  ar: "إختصارات لوحة المفاتيح معطلة على الهاتف المحمول"
+);
+$flyout-placeholder: (
+  en: "Double click to exit.",
+  de: "Doppelklick zum Verlassen.",
+  nl: "Dubbelklik om te verlaten.",
+  fr: "Double-cliquez pour quitter.",
+  es: "Haga doble clic para salir",
+  ar: "إنقر نقرًا مزدوجًا للخروج"
+);
+
+$profiles: (
+  bandcamp: #4e9bac,
+  delicious: #248cff,
+  facebook: #3b5998,
+  ficly: #b51c2c,
+  flickr: #0063db,
+  github: #4183c4,
+  googleplus: #dd4b39,
+  instagram: #517fa4,
+  kickstarter: #76cc1e,
+  lanyrd: #152e51,
+  lastfm: #d51007,
+  linkedin: #007bb6,
+  photodrop: #cdb6e3,
+  pinterest: #cb2027,
+  rdio: #0088da,
+  soundcloud: #f60,
+  twitter: #00aced,
+  vimeo: #aad450,
+  youtube: #b00
+);
