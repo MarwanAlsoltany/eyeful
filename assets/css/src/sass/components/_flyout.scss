@@ -24,6 +24,7 @@
               border-radius 500ms 500ms ease,
               width 500ms 500ms ease;
   cursor: pointer;
+  user-select: none;
   &:hover {
     height: $edges-height + 0.25rem;
     background: rgba(255,255,255,1);
