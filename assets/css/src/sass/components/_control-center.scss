@@ -18,6 +18,7 @@
   &.expanded {
     height: if($titlebar-height != 0, calc(100vh - #{$titlebar-height}), 100vh);
     .bar {
+      backdrop-filter: none;
       border-bottom-color: rgba(0,0,0,0.25);
       #hamburger {
         span {
@@ -132,6 +133,11 @@
           &::after {
             content: $pseudo-space $toggle-placeholder;
             font-family: quote(#{$typeface}), quote(#{$typeicon});
+          }
+          + .toggle {
+            pointer-events: none;
+            opacity: 0.5;
+            filter: grayscale(100%);
           }
         }
       }
@@ -265,7 +271,7 @@
       }
     }
   }
-  body.mam & {
+  body.mum & {
     visibility: hidden;
     opacity: 0;
   }

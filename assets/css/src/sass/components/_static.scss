@@ -22,7 +22,7 @@
       'top-left top-right'
       'bottom bottom';
   }
-  body.mam & {
+  body.mum & {
     min-height: 100vh;
     grid-template-columns: 1fr;
     grid-template-areas: 
@@ -43,7 +43,7 @@
       display: none;
     }
   }
-  body.mam & {
+  body.mum & {
     > #dashboard,
     > #clock,
     > .todos-container {
@@ -98,7 +98,7 @@
         'was-top-left was-top-left'
         'bottom bottom';
     }
-    body.mam & {
+    body.mum & {
       grid-template-columns: 1fr;
       grid-template-areas: 'bottom';
     }

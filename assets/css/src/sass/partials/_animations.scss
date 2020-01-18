@@ -5,25 +5,21 @@
     opacity: 0;
   }
   25% {
-    width: 15%;
-    max-width: 320px;
+    width: 320px;
     filter: blur(0.5rem) grayscale(25%);
     opacity: 0.5;
   }
   50% {
-    width: 15%;
-    max-width: 320px;
+    width: 320px;
     filter: blur(0) grayscale(0);
   }
   75% {
-    width: 15%;
-    max-width: 320px;
+    width: 320px;
     filter: blur(0) grayscale(0);
     opacity: 1;
   }
   95% {
-    width: 15%;
-    max-width: 320px;
+    width: 320px;
   }
   100% {
     filter: blur(5rem);

@@ -2,7 +2,7 @@
   "name": "eyeful",
   "version": "1.0.0",
   "description": "A time tracking application with some neat features.",
-  "main": "./dist/app.bundle.js",
+  "main": "./assets/js/dist/app.bundle.js",
   "scripts": {
     "mix-config": "cp -r node_modules/laravel-mix/setup/** ./",
     "dev": "npm run development",

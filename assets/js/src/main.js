@@ -45,7 +45,7 @@ import localization from "../../lang/js-localization.json";
       options: {
         glt: false, gcu: false, gnl: true,
         tsd: false, tst: false, tao: true,
-        mdm: false, mem: false, mam: false
+        mdm: false, mem: false, mum: false
       }
     },
     language: {
@@ -124,8 +124,15 @@ import localization from "../../lang/js-localization.json";
     });
     flyout.addEventListener('click', () => {
       flyout.parentElement.classList.add('expanded');
-      flyout.ondblclick = () => flyout.parentElement.classList.remove('expanded');
+      exitFlyout(window); // for desktop
+      exitFlyout(flyout); // for mobile
     }, true);
+    function exitFlyout(target) {
+      target.ondblclick = () => {
+        flyout.parentElement.classList.remove('expanded');
+        target.ondblclick = '';
+      }
+    }
   }
 
 

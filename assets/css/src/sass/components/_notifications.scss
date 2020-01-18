@@ -37,14 +37,14 @@
   @include viewport(xs, max) {
     width: calc(100% - 2rem);
     &.notify {
-      bottom: 9.5rem;
+      bottom: 10rem;
     }
   }
   body.mdm & {
     background: rgba($dark, 0.85);
   }
   body.mem &,
-  body:not(.mam) & {
+  body:not(.mum) & {
     @include viewport(lg, min) {
       width: calc((100% * 0.666666666) - (1rem * 0.333333333));
       max-width: unset;

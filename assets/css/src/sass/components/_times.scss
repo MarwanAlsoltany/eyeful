@@ -90,9 +90,9 @@
           @include lang-content($times-alternative)
         }
       }
-      body.mam & {
+      body.mum & {
         &::after {
-          @include lang-content($times-placholder-mam);
+          @include lang-content($times-placholder-mum);
         }
       }
       tr {
