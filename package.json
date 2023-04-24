@@ -39,7 +39,7 @@
   },
   "homepage": "https://github.com/MarwanAlsoltany/eyeful#readme",
   "devDependencies": {
-    "browser-sync": "^2.26.7",
+    "browser-sync": "^2.29.1",
     "browser-sync-webpack-plugin": "^2.0.1",
     "cross-env": "^6.0.3",
     "laravel-mix": "^6.0.49",
